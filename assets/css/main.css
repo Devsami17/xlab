@@ -11696,6 +11696,7 @@ font-size: 13px !important;}
   }
   .accordion-single-box:hover{
     background-color: #0583d8;
+    cursor: pointer;
   }
  .accordion-single-box_1 , .accordion-single-box_3{
   border-right: 1px solid #ccc;
