@@ -9368,8 +9368,8 @@ background-color: orangered;
 .service-item:hover .service-item__icon {
   background: var(--rs-theme-primary);
 }
-.service-item:hover .service-item__icon svg path[fill="#00D563"] {
-  fill: var(--rs-common-white);
+.service-item:hover .service-item__icon svg path[fill="#2F394E"] {
+  fill: white;
 }
 .service-item__icon {
   width: 105px;
