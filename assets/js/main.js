@@ -757,3 +757,28 @@ document.querySelectorAll(".accordion-item").forEach((item) => {
   function hire(value){
     a.value = value;
   }
+  function pricingSelect(event){
+    event.preventDefault(); // Prevent the default action of the anchor tag
+    const element = event.target; // Get the clicked element
+    
+    // Remove the class from all buttons
+    const buttons = document.querySelectorAll('ul a');
+    buttons.forEach(button => {
+        button.classList.remove('latest-pricing_section_active');
+    });
+    
+    // Add the class to the clicked button
+    element.classList.add('latest-pricing_section_active');
+}
+function opentab(button) {
+    // Hide all descriptions
+    var descriptions = document.querySelectorAll('.work-process__item-description');
+    descriptions.forEach((item) => {
+        item.style.display = "none";
+    });
+
+    // Show the description for the clicked button
+    var currentItem = button.closest('.work-process__item');
+    var description = currentItem.querySelector('.work-process__item-description');
+    description.style.display = "flex";
+}
