@@ -790,8 +790,8 @@ textarea {
 	1.8 spacing
 ---------------------------------*/
 .section-space {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-space {
@@ -6385,7 +6385,7 @@ body .ui-tooltip {
 .cta__area {
   position: relative;
   z-index: 11;
-  background-color:#2F394E ;
+  /* background-color:#2F394E ; */
 }
 .cta__area.footer-up-cta {
   margin-bottom: -63px;
@@ -9357,8 +9357,10 @@ background-color: orangered;
   margin-bottom: 79px;
   padding: 40px;
   border-radius: 5px;
-  border: 1px solid var(--rs-gray-200);
+  /* border: 1px solid var(--rs-gray-200); */
   background: var(--ss-common-white);
+  box-shadow: 0px 0px 0px 0px rgba(93.75, 91.10054347826089, 91.10054347826089, 0.5);
+
 }
 .service-item:hover {
   -webkit-transform: translate(0, 19px);
@@ -9375,7 +9377,7 @@ background-color: orangered;
   width: 105px;
   height: 105px;
   overflow: hidden;
-  background: var(--rs-gray-100);
+  /* background: var(--rs-gray-100); */
   border-radius: 500px;
 }
 .service-item .title {
@@ -9894,7 +9896,7 @@ border-right: 5px solid #fff;
     list-style: none;
     line-height: 25px;
 }
-.latest-pricing_section ul li a{
+/* .latest-pricing_section ul li a{
 
   color: #000;
   font-size: 16px;
@@ -9911,11 +9913,33 @@ border-right: 5px solid #fff;
   font-family: sans-serif;
   /* border: 1px solid #ed5f09; */
 
-}
+
 .latest-pricing_section_active{
   background: #2F394E !important;
   color: #fff !important;
 }
+.pricing-button {
+  color: #000;
+  font-size: 16px;
+  background: none;
+  box-shadow: 0px 0px 5px 0px rgba(93.75, 91.10054347826089, 91.10054347826089, 0.5);
+  border: none;
+  margin-bottom: 4px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 11px;
+  margin-right: 5px;
+  font-family: sans-serif;
+  /* border: 1px solid #ed5f09; */
+}
+
+.pricing-button.active {
+  background: #2F394E !important;
+  color: #fff !important;
+}
+
 .latest-pricing_section{
   padding-top: 0px !important;
 }
@@ -10138,10 +10162,10 @@ margin-left: 20px;
 .pack-btn li a {
   background: #051934;
   color: #fff !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   width: 100%;
   float: left;
-  /* padding: 15px 40px !important; */
+  padding: 10px 10px !important;
   border-radius: 6PX !important;
   text-transform: uppercase;
   background: #2F394E !important;
@@ -10211,7 +10235,7 @@ object-fit: contain;
 }
 .about-us__content-list li:after {
   left: 0;
-  color: var(--rs-theme-primary);
+  color: orangered;
   font-family: var(--rs-ff-fontawesome);
   content: "\f00c";
   position: absolute;

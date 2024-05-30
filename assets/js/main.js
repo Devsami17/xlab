@@ -782,3 +782,2802 @@ function opentab(button) {
     var description = currentItem.querySelector('.work-process__item-description');
     description.style.display = "flex";
 }
+///pricing work start //
+
+
+
+var mainBox2 = document.getElementById('pricingboxs');
+
+
+function pricingweb(){
+    mainBox2.innerHTML = ' ';
+    mainBox2.innerHTML=` <div class="col-lg-4 col-md-6 pack-item">
+
+    <div class="pack-inn">
+
+        <div class="pack-header">
+
+            <h3 class="pack-name">Start Up Website 
+
+                Package
+
+            </h3>
+
+          
+
+        </div>
+
+        <div class="pack-price">
+
+            <h4 class="pack-amt"><sup>$</sup>299 
+            </h4>
+
+        </div>
+
+        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                tabindex="0" style="max-height: none;">
+                <div id="mCSB_6_container" class="mCSB_container"
+                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                    <ul>
+
+
+
+
+
+                        <li>Up to 5 Page Website</li>
+
+
+
+                        <li>Up to 5 Stock Images (Industry Specific)</li>
+
+
+
+                        <li>Contact Form</li>
+
+
+
+                        <li>jQuery Slider</li>
+
+
+
+                        <li>3 Banner Designs</li>
+
+
+
+                        <li>Google Friendly Sitemap</li>
+
+
+
+                        <li>Complete W3C Certified HTML</li>
+
+
+
+                        <li>48 to 72 hours TAT</li>
+
+
+
+                        <li>Satisfaction Guarantee</li>
+
+
+
+                        <li>Unique Design Guarantee</li>
+
+
+
+                        <li>Money Back Guarantee *</li>
+
+
+
+                        <li>- Add On</li>
+
+
+
+                        <li>-- Mobile Responsive for $125</li>
+
+
+
+                        <li>-- CMS for Additional $150</li>
+
+
+
+
+
+
+
+                    </ul>
+
+                </div>
+                <div id="mCSB_6_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pack-btn">
+
+            <ul>
+
+                <li><a href="web-requirementsc92d.html?pack=6"
+                        name="Start Up Website Package - $299"
+                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                        Project</a></li>
+
+              
+
+            </ul>
+
+        </div>
+
+        <div class="pack-lbtn">
+
+            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                277541</a>
+
+            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+    <div class="pack-inn">
+
+        <div class="pack-header">
+
+            <h3 class="pack-name">Start Up Website 
+
+                Package
+
+            </h3>
+
+          
+
+        </div>
+
+        <div class="pack-price">
+            <i class="best-seller">
+                <img src="assets/imgs/hire-us/bestseller.png" alt="">
+            </i>
+            <h4 class="pack-amt"><sup>$</sup>299 
+            </h4>
+
+        </div>
+
+        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                tabindex="0" style="max-height: none;">
+                <div id="mCSB_6_container" class="mCSB_container"
+                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                    <ul>
+
+
+
+
+
+                        <li>Up to 5 Page Website</li>
+
+
+
+                        <li>Up to 5 Stock Images (Industry Specific)</li>
+
+
+
+                        <li>Contact Form</li>
+
+
+
+                        <li>jQuery Slider</li>
+
+
+
+                        <li>3 Banner Designs</li>
+
+
+
+                        <li>Google Friendly Sitemap</li>
+
+
+
+                        <li>Complete W3C Certified HTML</li>
+
+
+
+                        <li>48 to 72 hours TAT</li>
+
+
+
+                        <li>Satisfaction Guarantee</li>
+
+
+
+                        <li>Unique Design Guarantee</li>
+
+
+
+                        <li>Money Back Guarantee *</li>
+
+
+
+                        <li>- Add On</li>
+
+
+
+                        <li>-- Mobile Responsive for $125</li>
+
+
+
+                        <li>-- CMS for Additional $150</li>
+
+
+
+
+
+
+
+                    </ul>
+
+                </div>
+                <div id="mCSB_6_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pack-btn">
+
+            <ul>
+
+                <li><a href="web-requirementsc92d.html?pack=6"
+                        name="Start Up Website Package - $299"
+                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                        Project</a></li>
+
+              
+
+            </ul>
+
+        </div>
+
+        <div class="pack-lbtn">
+
+            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                277541</a>
+
+            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+    <div class="pack-inn">
+
+        <div class="pack-header">
+
+            <h3 class="pack-name">Start Up Website 
+
+                Package
+
+            </h3>
+
+          
+
+        </div>
+
+        <div class="pack-price">
+
+            <h4 class="pack-amt"><sup>$</sup>299 
+            </h4>
+
+        </div>
+
+        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                tabindex="0" style="max-height: none;">
+                <div id="mCSB_6_container" class="mCSB_container"
+                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                    <ul>
+
+
+
+
+
+                        <li>Up to 5 Page Website</li>
+
+
+
+                        <li>Up to 5 Stock Images (Industry Specific)</li>
+
+
+
+                        <li>Contact Form</li>
+
+
+
+                        <li>jQuery Slider</li>
+
+
+
+                        <li>3 Banner Designs</li>
+
+
+
+                        <li>Google Friendly Sitemap</li>
+
+
+
+                        <li>Complete W3C Certified HTML</li>
+
+
+
+                        <li>48 to 72 hours TAT</li>
+
+
+
+                        <li>Satisfaction Guarantee</li>
+
+
+
+                        <li>Unique Design Guarantee</li>
+
+
+
+                        <li>Money Back Guarantee *</li>
+
+
+
+                        <li>- Add On</li>
+
+
+
+                        <li>-- Mobile Responsive for $125</li>
+
+
+
+                        <li>-- CMS for Additional $150</li>
+
+
+
+
+
+
+
+                    </ul>
+
+                </div>
+                <div id="mCSB_6_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pack-btn">
+
+            <ul>
+
+                <li><a href="web-requirementsc92d.html?pack=6"
+                        name="Start Up Website Package - $299"
+                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                        Project</a></li>
+
+              
+
+            </ul>
+
+        </div>
+
+        <div class="pack-lbtn">
+
+            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                277541</a>
+
+            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+    <div class="pack-inn">
+
+        <div class="pack-header">
+
+            <h3 class="pack-name">Start Up Website 
+
+                Package
+
+            </h3>
+
+          
+
+        </div>
+
+        <div class="pack-price">
+
+            <h4 class="pack-amt"><sup>$</sup>299 
+            </h4>
+
+        </div>
+
+        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                tabindex="0" style="max-height: none;">
+                <div id="mCSB_6_container" class="mCSB_container"
+                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                    <ul>
+
+
+
+
+
+                        <li>Up to 5 Page Website</li>
+
+
+
+                        <li>Up to 5 Stock Images (Industry Specific)</li>
+
+
+
+                        <li>Contact Form</li>
+
+
+
+                        <li>jQuery Slider</li>
+
+
+
+                        <li>3 Banner Designs</li>
+
+
+
+                        <li>Google Friendly Sitemap</li>
+
+
+
+                        <li>Complete W3C Certified HTML</li>
+
+
+
+                        <li>48 to 72 hours TAT</li>
+
+
+
+                        <li>Satisfaction Guarantee</li>
+
+
+
+                        <li>Unique Design Guarantee</li>
+
+
+
+                        <li>Money Back Guarantee *</li>
+
+
+
+                        <li>- Add On</li>
+
+
+
+                        <li>-- Mobile Responsive for $125</li>
+
+
+
+                        <li>-- CMS for Additional $150</li>
+
+
+
+
+
+
+
+                    </ul>
+
+                </div>
+                <div id="mCSB_6_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pack-btn">
+
+            <ul>
+
+                <li><a href="web-requirementsc92d.html?pack=6"
+                        name="Start Up Website Package - $299"
+                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                        Project</a></li>
+
+              
+
+            </ul>
+
+        </div>
+
+        <div class="pack-lbtn">
+
+            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                277541</a>
+
+            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+    <div class="pack-inn">
+
+        <div class="pack-header">
+
+            <h3 class="pack-name">Start Up Website 
+
+                Package
+
+            </h3>
+
+          
+
+        </div>
+
+        <div class="pack-price">
+<i class="best-seller">
+<img src="assets/imgs/hire-us/bestseller.png" alt="">
+</i>
+            <h4 class="pack-amt"><sup>$</sup>299 
+            </h4>
+
+        </div>
+
+        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                tabindex="0" style="max-height: none;">
+                <div id="mCSB_6_container" class="mCSB_container"
+                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                    <ul>
+
+
+
+
+
+                        <li>Up to 5 Page Website</li>
+
+
+
+                        <li>Up to 5 Stock Images (Industry Specific)</li>
+
+
+
+                        <li>Contact Form</li>
+
+
+
+                        <li>jQuery Slider</li>
+
+
+
+                        <li>3 Banner Designs</li>
+
+
+
+                        <li>Google Friendly Sitemap</li>
+
+
+
+                        <li>Complete W3C Certified HTML</li>
+
+
+
+                        <li>48 to 72 hours TAT</li>
+
+
+
+                        <li>Satisfaction Guarantee</li>
+
+
+
+                        <li>Unique Design Guarantee</li>
+
+
+
+                        <li>Money Back Guarantee *</li>
+
+
+
+                        <li>- Add On</li>
+
+
+
+                        <li>-- Mobile Responsive for $125</li>
+
+
+
+                        <li>-- CMS for Additional $150</li>
+
+
+
+
+
+
+
+                    </ul>
+
+                </div>
+                <div id="mCSB_6_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pack-btn">
+
+            <ul>
+
+                <li><a href="web-requirementsc92d.html?pack=6"
+                        name="Start Up Website Package - $299"
+                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                        Project</a></li>
+
+              
+
+            </ul>
+
+        </div>
+
+        <div class="pack-lbtn">
+
+            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                277541</a>
+
+            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+        </div>
+
+    </div>
+
+</div>`;
+}
+
+
+function pricinglogo(){
+    mainBox2.innerHTML = "";
+    mainBox2.innerHTML = `
+    <div class="col-lg-4 col-md-6 pack-item">
+
+                        <div class="pack-inn">
+
+                            <div class="pack-header">
+
+                                <h3 class="pack-name">Start Up Logo
+
+                                    Package
+
+                                </h3>
+
+                              
+
+                            </div>
+
+                            <div class="pack-price">
+
+                                <h4 class="pack-amt"><sup>$</sup>35.5
+                                </h4>
+
+                            </div>
+
+                            <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+                                <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                    tabindex="0" style="max-height: none;">
+                                    <div id="mCSB_6_container" class="mCSB_container"
+                                        style="position:relative; top:0; left:0;" dir="ltr">
+
+                                        <ul>
+
+
+
+
+
+                                        <li>3 Custom Logo Design Concepts</li>
+                                        <li>1 Dedicated Designer</li>
+                                        <li>4 Revisions</li>
+                                        <li>2 hours TAT</li>
+                                        
+                                        <li>100% Unique Design Guarantee</li>
+                                        <li>100% Satisfaction Guarantee</li>
+                                        <li>100% Money Back Guarantee *</li>
+                                        <li>100% Ownership Rights</li>
+
+
+
+                                        </ul>
+
+                                    </div>
+                                    <div id="mCSB_6_scrollbar_vertical"
+                                        class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                        style="display: block;">
+                                        <div class="mCSB_draggerContainer">
+                                            <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                                style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                            </div>
+                                            <div class="mCSB_draggerRail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                 
+
+                            <div class="pack-btn">
+
+                                <ul>
+
+                                    <li><a href="web-requirementsc92d.html?pack=6"
+                                            name="Start Up Website Package - $299"
+                                            title="Start Up Website Pack For Only $299" class="order_now ">Start
+                                            Project</a></li>
+
+                                  
+
+                                </ul>
+
+                            </div>
+
+                            <div class="pack-lbtn">
+
+                                <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                                    277541</a>
+
+                                <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 pack-item">
+
+                    <div class="pack-inn">
+
+                        <div class="pack-header">
+
+                            <h3 class="pack-name">Start Up Logo
+
+                                Package
+
+                            </h3>
+
+                          
+
+                        </div>
+
+                        <div class="pack-price">
+
+                            <h4 class="pack-amt"><sup>$</sup>35.5
+                            </h4>
+
+                        </div>
+
+                        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+                            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                tabindex="0" style="max-height: none;">
+                                <div id="mCSB_6_container" class="mCSB_container"
+                                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                                    <ul>
+
+
+
+
+
+                                    <li>3 Custom Logo Design Concepts</li>
+                                    <li>1 Dedicated Designer</li>
+                                    <li>4 Revisions</li>
+                                    <li>2 hours TAT</li>
+                                    
+                                    <li>100% Unique Design Guarantee</li>
+                                    <li>100% Satisfaction Guarantee</li>
+                                    <li>100% Money Back Guarantee *</li>
+                                    <li>100% Ownership Rights</li>
+
+
+
+                                    </ul>
+
+                                </div>
+                                <div id="mCSB_6_scrollbar_vertical"
+                                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                    style="display: block;">
+                                    <div class="mCSB_draggerContainer">
+                                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                        </div>
+                                        <div class="mCSB_draggerRail"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+             
+
+                        <div class="pack-btn">
+
+                            <ul>
+
+                                <li><a href="web-requirementsc92d.html?pack=6"
+                                        name="Start Up Website Package - $299"
+                                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                                        Project</a></li>
+
+                              
+
+                            </ul>
+
+                        </div>
+
+                        <div class="pack-lbtn">
+
+                            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                                277541</a>
+
+                            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6 pack-item">
+
+                <div class="pack-inn">
+
+                    <div class="pack-header">
+
+                        <h3 class="pack-name">Start Up Logo
+
+                            Package
+
+                        </h3>
+
+                      
+
+                    </div>
+
+                    <div class="pack-price">
+
+                        <h4 class="pack-amt"><sup>$</sup>35.5
+                        </h4>
+
+                    </div>
+
+                    <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+                        <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                            tabindex="0" style="max-height: none;">
+                            <div id="mCSB_6_container" class="mCSB_container"
+                                style="position:relative; top:0; left:0;" dir="ltr">
+
+                                <ul>
+
+
+
+
+
+                                <li>3 Custom Logo Design Concepts</li>
+                                <li>1 Dedicated Designer</li>
+                                <li>4 Revisions</li>
+                                <li>2 hours TAT</li>
+                                
+                                <li>100% Unique Design Guarantee</li>
+                                <li>100% Satisfaction Guarantee</li>
+                                <li>100% Money Back Guarantee *</li>
+                                <li>100% Ownership Rights</li>
+
+
+
+                                </ul>
+
+                            </div>
+                            <div id="mCSB_6_scrollbar_vertical"
+                                class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                style="display: block;">
+                                <div class="mCSB_draggerContainer">
+                                    <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                        style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                    </div>
+                                    <div class="mCSB_draggerRail"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+         
+
+                    <div class="pack-btn">
+
+                        <ul>
+
+                            <li><a href="web-requirementsc92d.html?pack=6"
+                                    name="Start Up Website Package - $299"
+                                    title="Start Up Website Pack For Only $299" class="order_now ">Start
+                                    Project</a></li>
+
+                          
+
+                        </ul>
+
+                    </div>
+
+                    <div class="pack-lbtn">
+
+                        <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                            277541</a>
+
+                        <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 pack-item">
+
+            <div class="pack-inn">
+
+                <div class="pack-header">
+
+                    <h3 class="pack-name">Start Up Logo
+
+                        Package
+
+                    </h3>
+
+                  
+
+                </div>
+
+                <div class="pack-price">
+
+                    <h4 class="pack-amt"><sup>$</sup>35.5
+                    </h4>
+
+                </div>
+
+                <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+                    <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                        tabindex="0" style="max-height: none;">
+                        <div id="mCSB_6_container" class="mCSB_container"
+                            style="position:relative; top:0; left:0;" dir="ltr">
+
+                            <ul>
+
+
+
+
+
+                            <li>3 Custom Logo Design Concepts</li>
+                            <li>1 Dedicated Designer</li>
+                            <li>4 Revisions</li>
+                            <li>2 hours TAT</li>
+                            
+                            <li>100% Unique Design Guarantee</li>
+                            <li>100% Satisfaction Guarantee</li>
+                            <li>100% Money Back Guarantee *</li>
+                            <li>100% Ownership Rights</li>
+
+
+
+                            </ul>
+
+                        </div>
+                        <div id="mCSB_6_scrollbar_vertical"
+                            class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                            style="display: block;">
+                            <div class="mCSB_draggerContainer">
+                                <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                    style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                                    <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                </div>
+                                <div class="mCSB_draggerRail"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+     
+
+                <div class="pack-btn">
+
+                    <ul>
+
+                        <li><a href="web-requirementsc92d.html?pack=6"
+                                name="Start Up Website Package - $299"
+                                title="Start Up Website Pack For Only $299" class="order_now ">Start
+                                Project</a></li>
+
+                      
+
+                    </ul>
+
+                </div>
+
+                <div class="pack-lbtn">
+
+                    <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                        277541</a>
+
+                    <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 pack-item">
+
+        <div class="pack-inn">
+
+            <div class="pack-header">
+
+                <h3 class="pack-name">Start Up Logo
+
+                    Package
+
+                </h3>
+
+              
+
+            </div>
+
+            <div class="pack-price">
+            <i class="best-seller">
+            <img src="assets/imgs/hire-us/bestseller.png" alt="">
+        </i>
+                <h4 class="pack-amt"><sup>$</sup>35.5
+                </h4>
+
+            </div>
+
+            <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+                <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                    tabindex="0" style="max-height: none;">
+                    <div id="mCSB_6_container" class="mCSB_container"
+                        style="position:relative; top:0; left:0;" dir="ltr">
+
+                        <ul>
+
+
+
+
+
+                        <li>3 Custom Logo Design Concepts</li>
+                        <li>1 Dedicated Designer</li>
+                        <li>4 Revisions</li>
+                        <li>2 hours TAT</li>
+                        
+                        <li>100% Unique Design Guarantee</li>
+                        <li>100% Satisfaction Guarantee</li>
+                        <li>100% Money Back Guarantee *</li>
+                        <li>100% Ownership Rights</li>
+
+
+
+                        </ul>
+
+                    </div>
+                    <div id="mCSB_6_scrollbar_vertical"
+                        class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                        style="display: block;">
+                        <div class="mCSB_draggerContainer">
+                            <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                            </div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ 
+
+            <div class="pack-btn">
+
+                <ul>
+
+                    <li><a href="web-requirementsc92d.html?pack=6"
+                            name="Start Up Website Package - $299"
+                            title="Start Up Website Pack For Only $299" class="order_now ">Start
+                            Project</a></li>
+
+                  
+
+                </ul>
+
+            </div>
+
+            <div class="pack-lbtn">
+
+                <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                    277541</a>
+
+                <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+            </div>
+
+        </div>
+
+    </div>
+    `;
+}
+function pricingillustration(){
+    mainBox2.innerHTML = "";
+    mainBox2.innerHTML = `
+    <div class="col-lg-4 col-md-6 pack-item">
+
+    <div class="pack-inn">
+
+        <div class="pack-header">
+
+            <h3 class="pack-name">Start Up Illustrative
+
+                Package
+
+            </h3>
+
+          
+
+        </div>
+
+        <div class="pack-price">
+
+            <h4 class="pack-amt"><sup>$</sup>195
+            </h4>
+
+        </div>
+
+        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                tabindex="0" style="max-height: none;">
+                <div id="mCSB_6_container" class="mCSB_container"
+                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                    <ul>
+
+
+
+
+
+                    <li> 4 Custom Logo Design Concepts</li>
+                    <li> By 3 Designers</li>
+                    <li> 48 to 72 hours TAT</li>
+                    <li> UNLIMITED Revisions</li>
+                    <li> All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)</li>
+                    <li> 100% Ownership Rights</li>
+                    <li> 100% Satisfaction Guarantee</li>
+                    <li> 100% Unique Design Guarantee</li>
+                    <li> 100% Money Back Guarantee</li>
+
+
+
+
+
+
+                    </ul>
+
+                </div>
+                <div id="mCSB_6_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pack-btn">
+
+            <ul>
+
+                <li><a href="web-requirementsc92d.html?pack=6"
+                        name="Start Up Website Package - $299"
+                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                        Project</a></li>
+
+              
+
+            </ul>
+
+        </div>
+
+        <div class="pack-lbtn">
+
+            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                277541</a>
+
+            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+<div class="pack-inn">
+
+    <div class="pack-header">
+
+        <h3 class="pack-name">Start Up Illustrative
+
+            Package
+
+        </h3>
+
+      
+
+    </div>
+
+    <div class="pack-price">
+
+        <h4 class="pack-amt"><sup>$</sup>195
+        </h4>
+
+    </div>
+
+    <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+        <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+            tabindex="0" style="max-height: none;">
+            <div id="mCSB_6_container" class="mCSB_container"
+                style="position:relative; top:0; left:0;" dir="ltr">
+
+                <ul>
+
+
+
+
+
+                <li> 4 Custom Logo Design Concepts</li>
+                <li> By 3 Designers</li>
+                <li> 48 to 72 hours TAT</li>
+                <li> UNLIMITED Revisions</li>
+                <li> All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)</li>
+                <li> 100% Ownership Rights</li>
+                <li> 100% Satisfaction Guarantee</li>
+                <li> 100% Unique Design Guarantee</li>
+                <li> 100% Money Back Guarantee</li>
+
+
+
+
+
+
+                </ul>
+
+            </div>
+            <div id="mCSB_6_scrollbar_vertical"
+                class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                style="display: block;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                        style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                    </div>
+                    <div class="mCSB_draggerRail"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="pack-btn">
+
+        <ul>
+
+            <li><a href="web-requirementsc92d.html?pack=6"
+                    name="Start Up Website Package - $299"
+                    title="Start Up Website Pack For Only $299" class="order_now ">Start
+                    Project</a></li>
+
+          
+
+        </ul>
+
+    </div>
+
+    <div class="pack-lbtn">
+
+        <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+            277541</a>
+
+        <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+    </div>
+
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+<div class="pack-inn">
+
+    <div class="pack-header">
+
+        <h3 class="pack-name">Start Up Illustrative
+
+            Package
+
+        </h3>
+
+      
+
+    </div>
+
+    <div class="pack-price">
+
+        <h4 class="pack-amt"><sup>$</sup>195
+        </h4>
+
+    </div>
+
+    <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+        <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+            tabindex="0" style="max-height: none;">
+            <div id="mCSB_6_container" class="mCSB_container"
+                style="position:relative; top:0; left:0;" dir="ltr">
+
+                <ul>
+
+
+
+
+
+                <li> 4 Custom Logo Design Concepts</li>
+                <li> By 3 Designers</li>
+                <li> 48 to 72 hours TAT</li>
+                <li> UNLIMITED Revisions</li>
+                <li> All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)</li>
+                <li> 100% Ownership Rights</li>
+                <li> 100% Satisfaction Guarantee</li>
+                <li> 100% Unique Design Guarantee</li>
+                <li> 100% Money Back Guarantee</li>
+
+
+
+
+
+
+                </ul>
+
+            </div>
+            <div id="mCSB_6_scrollbar_vertical"
+                class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                style="display: block;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                        style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                    </div>
+                    <div class="mCSB_draggerRail"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="pack-btn">
+
+        <ul>
+
+            <li><a href="web-requirementsc92d.html?pack=6"
+                    name="Start Up Website Package - $299"
+                    title="Start Up Website Pack For Only $299" class="order_now ">Start
+                    Project</a></li>
+
+          
+
+        </ul>
+
+    </div>
+
+    <div class="pack-lbtn">
+
+        <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+            277541</a>
+
+        <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+    </div>
+
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+<div class="pack-inn">
+
+    <div class="pack-header">
+
+        <h3 class="pack-name">Start Up Illustrative
+
+            Package
+
+        </h3>
+
+      
+
+    </div>
+
+    <div class="pack-price">
+    <i class="best-seller">
+    <img src="assets/imgs/hire-us/bestseller.png" alt="">
+</i>
+        <h4 class="pack-amt"><sup>$</sup>195
+        </h4>
+
+    </div>
+
+    <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+        <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+            tabindex="0" style="max-height: none;">
+            <div id="mCSB_6_container" class="mCSB_container"
+                style="position:relative; top:0; left:0;" dir="ltr">
+
+                <ul>
+
+
+
+
+
+                <li> 4 Custom Logo Design Concepts</li>
+                <li> By 3 Designers</li>
+                <li> 48 to 72 hours TAT</li>
+                <li> UNLIMITED Revisions</li>
+                <li> All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)</li>
+                <li> 100% Ownership Rights</li>
+                <li> 100% Satisfaction Guarantee</li>
+                <li> 100% Unique Design Guarantee</li>
+                <li> 100% Money Back Guarantee</li>
+
+
+
+
+
+
+                </ul>
+
+            </div>
+            <div id="mCSB_6_scrollbar_vertical"
+                class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                style="display: block;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                        style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                    </div>
+                    <div class="mCSB_draggerRail"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="pack-btn">
+
+        <ul>
+
+            <li><a href="web-requirementsc92d.html?pack=6"
+                    name="Start Up Website Package - $299"
+                    title="Start Up Website Pack For Only $299" class="order_now ">Start
+                    Project</a></li>
+
+          
+
+        </ul>
+
+    </div>
+
+    <div class="pack-lbtn">
+
+        <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+            277541</a>
+
+        <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+    </div>
+
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+<div class="pack-inn">
+
+    <div class="pack-header">
+
+        <h3 class="pack-name">Start Up Illustrative
+
+            Package
+
+        </h3>
+
+      
+
+    </div>
+
+    <div class="pack-price">
+
+        <h4 class="pack-amt"><sup>$</sup>195
+        </h4>
+
+    </div>
+
+    <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+        <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+            tabindex="0" style="max-height: none;">
+            <div id="mCSB_6_container" class="mCSB_container"
+                style="position:relative; top:0; left:0;" dir="ltr">
+
+                <ul>
+
+
+
+
+
+                <li> 4 Custom Logo Design Concepts</li>
+                <li> By 3 Designers</li>
+                <li> 48 to 72 hours TAT</li>
+                <li> UNLIMITED Revisions</li>
+                <li> All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)</li>
+                <li> 100% Ownership Rights</li>
+                <li> 100% Satisfaction Guarantee</li>
+                <li> 100% Unique Design Guarantee</li>
+                <li> 100% Money Back Guarantee</li>
+
+
+
+
+
+
+                </ul>
+
+            </div>
+            <div id="mCSB_6_scrollbar_vertical"
+                class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                style="display: block;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                        style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                    </div>
+                    <div class="mCSB_draggerRail"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="pack-btn">
+
+        <ul>
+
+            <li><a href="web-requirementsc92d.html?pack=6"
+                    name="Start Up Website Package - $299"
+                    title="Start Up Website Pack For Only $299" class="order_now ">Start
+                    Project</a></li>
+
+          
+
+        </ul>
+
+    </div>
+
+    <div class="pack-lbtn">
+
+        <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+            277541</a>
+
+        <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+    </div>
+
+</div>
+
+</div>
+    `;
+}
+function pricingseo(){
+    mainBox2.innerHTML = " ";
+    mainBox2.innerHTML = `
+    <div class="col-lg-4 col-md-6 pack-item">
+
+                        <div class="pack-inn">
+
+                            <div class="pack-header">
+
+                                <h3 class="pack-name">basic Seo
+
+                                    Package
+
+                                </h3>
+
+                              
+
+                            </div>
+
+                            <div class="pack-price">
+
+                                <h4 class="pack-amt"><sup>$</sup>999.99
+                                </h4>
+
+                            </div>
+
+                            <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+                                <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                    tabindex="0" style="max-height: none;">
+                                    <div id="mCSB_6_container" class="mCSB_container"
+                                        style="position:relative; top:0; left:0;" dir="ltr">
+
+                                        <ul>
+
+
+
+
+
+                                        <li class="heading">Prior Analysis</li>
+                                        <li>Business Analysis</li>
+                                        <li>Consumer Analysis</li>
+                                        <li>Competitor Analysis</li>
+                                        <li>15 Selected Keywords Targeting</li>
+                                        <li>15 Pages Keyword Targeted</li>
+                                        <li class="heading">Webpage Optimization</li>
+                                        <li>Meta Tags Creation</li>
+                                        <li>Keyword Optimization</li>
+                                        <li>Image Optimization</li>
+                                        <li>Inclusion of anchors</li>
+                                        <li class="heading">Tracking &amp; Analysis</li>
+                                        <li>Google Analytics Installation</li>
+                                        <li>Google Webmaster Installation</li>
+                                        <li>Call To Action Plan</li>
+                                        <li>Creation of Sitemaps</li>
+                                        <li class="heading">Reporting</li>
+                                        <li>Monthly Reporting </li>
+                                        <li>Recommendation </li>
+                                        <li>Email Support</li>
+                                        <li>Phone Support</li>
+                                        <li class="heading">Off Page Optimization</li>
+                                        <li>Social Bookmarking</li>
+                                        <li>Slide Share Marketing </li>
+                                        <li>Forums/FAQ’s</li>
+                                        <li>Link Building</li>
+                                        <li>Directory Submission</li>
+                                        <li>Local Business Listings </li>
+
+
+
+
+
+                                        </ul>
+
+                                    </div>
+                                    <div id="mCSB_6_scrollbar_vertical"
+                                        class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                        style="display: block;">
+                                        <div class="mCSB_draggerContainer">
+                                            <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                                style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                            </div>
+                                            <div class="mCSB_draggerRail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                 
+
+                            <div class="pack-btn">
+
+                                <ul>
+
+                                    <li><a href="web-requirementsc92d.html?pack=6"
+                                            name="Start Up Website Package - $299"
+                                            title="Start Up Website Pack For Only $299" class="order_now ">Start
+                                            Project</a></li>
+
+                                  
+
+                                </ul>
+
+                            </div>
+
+                            <div class="pack-lbtn">
+
+                                <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                                    277541</a>
+
+                                <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 pack-item">
+
+                    <div class="pack-inn">
+
+                        <div class="pack-header">
+
+                            <h3 class="pack-name">basic Seo
+
+                                Package
+
+                            </h3>
+
+                          
+
+                        </div>
+
+                        <div class="pack-price">
+
+                            <h4 class="pack-amt"><sup>$</sup>999.99
+                            </h4>
+
+                        </div>
+
+                        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+                            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                tabindex="0" style="max-height: none;">
+                                <div id="mCSB_6_container" class="mCSB_container"
+                                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                                    <ul>
+
+
+
+
+
+                                    <li class="heading">Prior Analysis</li>
+                                    <li>Business Analysis</li>
+                                    <li>Consumer Analysis</li>
+                                    <li>Competitor Analysis</li>
+                                    <li>15 Selected Keywords Targeting</li>
+                                    <li>15 Pages Keyword Targeted</li>
+                                    <li class="heading">Webpage Optimization</li>
+                                    <li>Meta Tags Creation</li>
+                                    <li>Keyword Optimization</li>
+                                    <li>Image Optimization</li>
+                                    <li>Inclusion of anchors</li>
+                                    <li class="heading">Tracking &amp; Analysis</li>
+                                    <li>Google Analytics Installation</li>
+                                    <li>Google Webmaster Installation</li>
+                                    <li>Call To Action Plan</li>
+                                    <li>Creation of Sitemaps</li>
+                                    <li class="heading">Reporting</li>
+                                    <li>Monthly Reporting </li>
+                                    <li>Recommendation </li>
+                                    <li>Email Support</li>
+                                    <li>Phone Support</li>
+                                    <li class="heading">Off Page Optimization</li>
+                                    <li>Social Bookmarking</li>
+                                    <li>Slide Share Marketing </li>
+                                    <li>Forums/FAQ’s</li>
+                                    <li>Link Building</li>
+                                    <li>Directory Submission</li>
+                                    <li>Local Business Listings </li>
+
+
+
+
+
+                                    </ul>
+
+                                </div>
+                                <div id="mCSB_6_scrollbar_vertical"
+                                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                    style="display: block;">
+                                    <div class="mCSB_draggerContainer">
+                                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                        </div>
+                                        <div class="mCSB_draggerRail"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+             
+
+                        <div class="pack-btn">
+
+                            <ul>
+
+                                <li><a href="web-requirementsc92d.html?pack=6"
+                                        name="Start Up Website Package - $299"
+                                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                                        Project</a></li>
+
+                              
+
+                            </ul>
+
+                        </div>
+
+                        <div class="pack-lbtn">
+
+                            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                                277541</a>
+
+                            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6 pack-item">
+
+                <div class="pack-inn">
+
+                    <div class="pack-header">
+
+                        <h3 class="pack-name">basic Seo
+
+                            Package
+
+                        </h3>
+
+                      
+
+                    </div>
+
+                    <div class="pack-price">
+
+                        <h4 class="pack-amt"><sup>$</sup>999.99
+                        </h4>
+
+                    </div>
+
+                    <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+                        <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                            tabindex="0" style="max-height: none;">
+                            <div id="mCSB_6_container" class="mCSB_container"
+                                style="position:relative; top:0; left:0;" dir="ltr">
+
+                                <ul>
+
+
+
+
+
+                                <li class="heading">Prior Analysis</li>
+                                <li>Business Analysis</li>
+                                <li>Consumer Analysis</li>
+                                <li>Competitor Analysis</li>
+                                <li>15 Selected Keywords Targeting</li>
+                                <li>15 Pages Keyword Targeted</li>
+                                <li class="heading">Webpage Optimization</li>
+                                <li>Meta Tags Creation</li>
+                                <li>Keyword Optimization</li>
+                                <li>Image Optimization</li>
+                                <li>Inclusion of anchors</li>
+                                <li class="heading">Tracking &amp; Analysis</li>
+                                <li>Google Analytics Installation</li>
+                                <li>Google Webmaster Installation</li>
+                                <li>Call To Action Plan</li>
+                                <li>Creation of Sitemaps</li>
+                                <li class="heading">Reporting</li>
+                                <li>Monthly Reporting </li>
+                                <li>Recommendation </li>
+                                <li>Email Support</li>
+                                <li>Phone Support</li>
+                                <li class="heading">Off Page Optimization</li>
+                                <li>Social Bookmarking</li>
+                                <li>Slide Share Marketing </li>
+                                <li>Forums/FAQ’s</li>
+                                <li>Link Building</li>
+                                <li>Directory Submission</li>
+                                <li>Local Business Listings </li>
+
+
+
+
+
+                                </ul>
+
+                            </div>
+                            <div id="mCSB_6_scrollbar_vertical"
+                                class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                style="display: block;">
+                                <div class="mCSB_draggerContainer">
+                                    <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                        style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                    </div>
+                                    <div class="mCSB_draggerRail"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+         
+
+                    <div class="pack-btn">
+
+                        <ul>
+
+                            <li><a href="web-requirementsc92d.html?pack=6"
+                                    name="Start Up Website Package - $299"
+                                    title="Start Up Website Pack For Only $299" class="order_now ">Start
+                                    Project</a></li>
+
+                          
+
+                        </ul>
+
+                    </div>
+
+                    <div class="pack-lbtn">
+
+                        <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                            277541</a>
+
+                        <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 pack-item">
+
+            <div class="pack-inn">
+
+                <div class="pack-header">
+
+                    <h3 class="pack-name">basic Seo
+
+                        Package
+
+                    </h3>
+
+                  
+
+                </div>
+
+                <div class="pack-price">
+
+                    <h4 class="pack-amt"><sup>$</sup>999.99
+                    </h4>
+
+                </div>
+
+                <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+                    <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                        tabindex="0" style="max-height: none;">
+                        <div id="mCSB_6_container" class="mCSB_container"
+                            style="position:relative; top:0; left:0;" dir="ltr">
+
+                            <ul>
+
+
+
+
+
+                            <li class="heading">Prior Analysis</li>
+                            <li>Business Analysis</li>
+                            <li>Consumer Analysis</li>
+                            <li>Competitor Analysis</li>
+                            <li>15 Selected Keywords Targeting</li>
+                            <li>15 Pages Keyword Targeted</li>
+                            <li class="heading">Webpage Optimization</li>
+                            <li>Meta Tags Creation</li>
+                            <li>Keyword Optimization</li>
+                            <li>Image Optimization</li>
+                            <li>Inclusion of anchors</li>
+                            <li class="heading">Tracking &amp; Analysis</li>
+                            <li>Google Analytics Installation</li>
+                            <li>Google Webmaster Installation</li>
+                            <li>Call To Action Plan</li>
+                            <li>Creation of Sitemaps</li>
+                            <li class="heading">Reporting</li>
+                            <li>Monthly Reporting </li>
+                            <li>Recommendation </li>
+                            <li>Email Support</li>
+                            <li>Phone Support</li>
+                            <li class="heading">Off Page Optimization</li>
+                            <li>Social Bookmarking</li>
+                            <li>Slide Share Marketing </li>
+                            <li>Forums/FAQ’s</li>
+                            <li>Link Building</li>
+                            <li>Directory Submission</li>
+                            <li>Local Business Listings </li>
+
+
+
+
+
+                            </ul>
+
+                        </div>
+                        <div id="mCSB_6_scrollbar_vertical"
+                            class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                            style="display: block;">
+                            <div class="mCSB_draggerContainer">
+                                <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                    style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                                    <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                                </div>
+                                <div class="mCSB_draggerRail"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+     
+
+                <div class="pack-btn">
+
+                    <ul>
+
+                        <li><a href="web-requirementsc92d.html?pack=6"
+                                name="Start Up Website Package - $299"
+                                title="Start Up Website Pack For Only $299" class="order_now ">Start
+                                Project</a></li>
+
+                      
+
+                    </ul>
+
+                </div>
+
+                <div class="pack-lbtn">
+
+                    <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                        277541</a>
+
+                    <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-lg-4 col-md-6 pack-item">
+
+        <div class="pack-inn">
+
+            <div class="pack-header">
+
+                <h3 class="pack-name">basic Seo
+
+                    Package
+
+                </h3>
+
+              
+
+            </div>
+
+            <div class="pack-price">
+
+                <h4 class="pack-amt"><sup>$</sup>999.99
+                </h4>
+
+            </div>
+
+            <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+                <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                    tabindex="0" style="max-height: none;">
+                    <div id="mCSB_6_container" class="mCSB_container"
+                        style="position:relative; top:0; left:0;" dir="ltr">
+
+                        <ul>
+
+
+
+
+
+                        <li class="heading">Prior Analysis</li>
+                        <li>Business Analysis</li>
+                        <li>Consumer Analysis</li>
+                        <li>Competitor Analysis</li>
+                        <li>15 Selected Keywords Targeting</li>
+                        <li>15 Pages Keyword Targeted</li>
+                        <li class="heading">Webpage Optimization</li>
+                        <li>Meta Tags Creation</li>
+                        <li>Keyword Optimization</li>
+                        <li>Image Optimization</li>
+                        <li>Inclusion of anchors</li>
+                        <li class="heading">Tracking &amp; Analysis</li>
+                        <li>Google Analytics Installation</li>
+                        <li>Google Webmaster Installation</li>
+                        <li>Call To Action Plan</li>
+                        <li>Creation of Sitemaps</li>
+                        <li class="heading">Reporting</li>
+                        <li>Monthly Reporting </li>
+                        <li>Recommendation </li>
+                        <li>Email Support</li>
+                        <li>Phone Support</li>
+                        <li class="heading">Off Page Optimization</li>
+                        <li>Social Bookmarking</li>
+                        <li>Slide Share Marketing </li>
+                        <li>Forums/FAQ’s</li>
+                        <li>Link Building</li>
+                        <li>Directory Submission</li>
+                        <li>Local Business Listings </li>
+
+
+
+
+
+                        </ul>
+
+                    </div>
+                    <div id="mCSB_6_scrollbar_vertical"
+                        class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                        style="display: block;">
+                        <div class="mCSB_draggerContainer">
+                            <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                                style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                            </div>
+                            <div class="mCSB_draggerRail"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ 
+
+            <div class="pack-btn">
+
+                <ul>
+
+                    <li><a href="web-requirementsc92d.html?pack=6"
+                            name="Start Up Website Package - $299"
+                            title="Start Up Website Pack For Only $299" class="order_now ">Start
+                            Project</a></li>
+
+                  
+
+                </ul>
+
+            </div>
+
+            <div class="pack-lbtn">
+
+                <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                    277541</a>
+
+                <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    `;
+}
+
+function pricingecom()
+{
+    mainBox2.innerHTML = "";
+    mainBox2.innerHTML= `
+    <div class="col-lg-4 col-md-6 pack-item">
+
+    <div class="pack-inn">
+
+        <div class="pack-header">
+
+            <h3 class="pack-name">e-Commerce
+
+                Package
+
+            </h3>
+
+          
+
+        </div>
+
+        <div class="pack-price">
+
+            <h4 class="pack-amt"><sup>$</sup>895
+            </h4>
+
+        </div>
+
+        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                tabindex="0" style="max-height: none;">
+                <div id="mCSB_6_container" class="mCSB_container"
+                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                    <ul>
+
+
+
+
+                    <li>Upto 15 Unique Pages Website</li>
+                    <li>Conceptual and Dynamic Website</li>
+                    <li>Content Management System (CMS)</li>
+                    <li>Mobile Responsive</li>
+                    <li>Easy Product Search</li>
+                    <li>Product Reviews</li>
+                    <li>Up To 100 Products</li>
+                    <li>Up To 7 Categories</li>
+                    <li>Full Shopping Cart Integration</li>
+                    <li>Payment Module Integration</li>
+                    <li>Sales &amp; Inventory Management</li>
+                    <li>Jquery Slider</li>
+                    <li>Free Google Friendly Sitemap</li>
+                    <!--<li>FREE 1 Years Hosting</li>-->
+                    <li>Custom Email Addresses</li>
+
+
+
+
+
+
+
+                    </ul>
+
+                </div>
+                <div id="mCSB_6_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pack-btn">
+
+            <ul>
+
+                <li><a href="web-requirementsc92d.html?pack=6"
+                        name="Start Up Website Package - $299"
+                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                        Project</a></li>
+
+              
+
+            </ul>
+
+        </div>
+
+        <div class="pack-lbtn">
+
+            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                277541</a>
+
+            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+<div class="pack-inn">
+
+    <div class="pack-header">
+
+        <h3 class="pack-name">e-Commerce
+
+            Package
+
+        </h3>
+
+      
+
+    </div>
+
+    <div class="pack-price">
+
+        <h4 class="pack-amt"><sup>$</sup>895
+        </h4>
+
+    </div>
+
+    <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+        <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+            tabindex="0" style="max-height: none;">
+            <div id="mCSB_6_container" class="mCSB_container"
+                style="position:relative; top:0; left:0;" dir="ltr">
+
+                <ul>
+
+
+
+
+                <li>Upto 15 Unique Pages Website</li>
+                <li>Conceptual and Dynamic Website</li>
+                <li>Content Management System (CMS)</li>
+                <li>Mobile Responsive</li>
+                <li>Easy Product Search</li>
+                <li>Product Reviews</li>
+                <li>Up To 100 Products</li>
+                <li>Up To 7 Categories</li>
+                <li>Full Shopping Cart Integration</li>
+                <li>Payment Module Integration</li>
+                <li>Sales &amp; Inventory Management</li>
+                <li>Jquery Slider</li>
+                <li>Free Google Friendly Sitemap</li>
+                <!--<li>FREE 1 Years Hosting</li>-->
+                <li>Custom Email Addresses</li>
+
+
+
+
+
+
+
+                </ul>
+
+            </div>
+            <div id="mCSB_6_scrollbar_vertical"
+                class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                style="display: block;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                        style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                    </div>
+                    <div class="mCSB_draggerRail"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="pack-btn">
+
+        <ul>
+
+            <li><a href="web-requirementsc92d.html?pack=6"
+                    name="Start Up Website Package - $299"
+                    title="Start Up Website Pack For Only $299" class="order_now ">Start
+                    Project</a></li>
+
+          
+
+        </ul>
+
+    </div>
+
+    <div class="pack-lbtn">
+
+        <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+            277541</a>
+
+        <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+    </div>
+
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+    <div class="pack-inn">
+
+        <div class="pack-header">
+
+            <h3 class="pack-name">e-Commerce
+
+                Package
+
+            </h3>
+
+          
+
+        </div>
+
+        <div class="pack-price">
+
+            <h4 class="pack-amt"><sup>$</sup>895
+            </h4>
+
+        </div>
+
+        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                tabindex="0" style="max-height: none;">
+                <div id="mCSB_6_container" class="mCSB_container"
+                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                    <ul>
+
+
+
+
+                    <li>Upto 15 Unique Pages Website</li>
+                    <li>Conceptual and Dynamic Website</li>
+                    <li>Content Management System (CMS)</li>
+                    <li>Mobile Responsive</li>
+                    <li>Easy Product Search</li>
+                    <li>Product Reviews</li>
+                    <li>Up To 100 Products</li>
+                    <li>Up To 7 Categories</li>
+                    <li>Full Shopping Cart Integration</li>
+                    <li>Payment Module Integration</li>
+                    <li>Sales &amp; Inventory Management</li>
+                    <li>Jquery Slider</li>
+                    <li>Free Google Friendly Sitemap</li>
+                    <!--<li>FREE 1 Years Hosting</li>-->
+                    <li>Custom Email Addresses</li>
+
+
+
+
+
+
+
+                    </ul>
+
+                </div>
+                <div id="mCSB_6_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pack-btn">
+
+            <ul>
+
+                <li><a href="web-requirementsc92d.html?pack=6"
+                        name="Start Up Website Package - $299"
+                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                        Project</a></li>
+
+              
+
+            </ul>
+
+        </div>
+
+        <div class="pack-lbtn">
+
+            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                277541</a>
+
+            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+<div class="pack-inn">
+
+    <div class="pack-header">
+
+        <h3 class="pack-name">e-Commerce
+
+            Package
+
+        </h3>
+
+      
+
+    </div>
+
+    <div class="pack-price">
+
+        <h4 class="pack-amt"><sup>$</sup>895
+        </h4>
+
+    </div>
+
+    <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+        <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+            tabindex="0" style="max-height: none;">
+            <div id="mCSB_6_container" class="mCSB_container"
+                style="position:relative; top:0; left:0;" dir="ltr">
+
+                <ul>
+
+
+
+
+                <li>Upto 15 Unique Pages Website</li>
+                <li>Conceptual and Dynamic Website</li>
+                <li>Content Management System (CMS)</li>
+                <li>Mobile Responsive</li>
+                <li>Easy Product Search</li>
+                <li>Product Reviews</li>
+                <li>Up To 100 Products</li>
+                <li>Up To 7 Categories</li>
+                <li>Full Shopping Cart Integration</li>
+                <li>Payment Module Integration</li>
+                <li>Sales &amp; Inventory Management</li>
+                <li>Jquery Slider</li>
+                <li>Free Google Friendly Sitemap</li>
+                <!--<li>FREE 1 Years Hosting</li>-->
+                <li>Custom Email Addresses</li>
+
+
+
+
+
+
+
+                </ul>
+
+            </div>
+            <div id="mCSB_6_scrollbar_vertical"
+                class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                style="display: block;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                        style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                    </div>
+                    <div class="mCSB_draggerRail"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="pack-btn">
+
+        <ul>
+
+            <li><a href="web-requirementsc92d.html?pack=6"
+                    name="Start Up Website Package - $299"
+                    title="Start Up Website Pack For Only $299" class="order_now ">Start
+                    Project</a></li>
+
+          
+
+        </ul>
+
+    </div>
+
+    <div class="pack-lbtn">
+
+        <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+            277541</a>
+
+        <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+    </div>
+
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 pack-item">
+
+    <div class="pack-inn">
+
+        <div class="pack-header">
+
+            <h3 class="pack-name">e-Commerce
+
+                Package
+
+            </h3>
+
+          
+
+        </div>
+
+        <div class="pack-price">
+
+            <h4 class="pack-amt"><sup>$</sup>895
+            </h4>
+
+        </div>
+
+        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                tabindex="0" style="max-height: none;">
+                <div id="mCSB_6_container" class="mCSB_container"
+                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                    <ul>
+
+
+
+
+                    <li>Upto 15 Unique Pages Website</li>
+                    <li>Conceptual and Dynamic Website</li>
+                    <li>Content Management System (CMS)</li>
+                    <li>Mobile Responsive</li>
+                    <li>Easy Product Search</li>
+                    <li>Product Reviews</li>
+                    <li>Up To 100 Products</li>
+                    <li>Up To 7 Categories</li>
+                    <li>Full Shopping Cart Integration</li>
+                    <li>Payment Module Integration</li>
+                    <li>Sales &amp; Inventory Management</li>
+                    <li>Jquery Slider</li>
+                    <li>Free Google Friendly Sitemap</li>
+                    <!--<li>FREE 1 Years Hosting</li>-->
+                    <li>Custom Email Addresses</li>
+
+
+
+
+
+
+
+                    </ul>
+
+                </div>
+                <div id="mCSB_6_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pack-btn">
+
+            <ul>
+
+                <li><a href="web-requirementsc92d.html?pack=6"
+                        name="Start Up Website Package - $299"
+                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                        Project</a></li>
+
+              
+
+            </ul>
+
+        </div>
+
+        <div class="pack-lbtn">
+
+            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                277541</a>
+
+            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+        </div>
+
+    </div>
+
+</div>
+    
+    
+    `;
+
+
+}
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.pricing-button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                // Remove the active class from all buttons
+                buttons.forEach(btn => btn.classList.remove('active'));
+
+                // Add the active class to the clicked button
+                event.currentTarget.classList.add('active');
+
+                // Call the corresponding function (if any)
+                const functionName = event.currentTarget.getAttribute('onclick').replace('(event)', '');
+                if (typeof window[functionName] === 'function') {
+                    window[functionName](event);
+                }
+            });
+        });
+    });
+
+    
