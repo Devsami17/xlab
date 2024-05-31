@@ -1181,7 +1181,7 @@ textarea {
   content: "";
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
-  background-color: var(--rs-heading-primary);
+  background-color: #2F394E;
 }
 .rs-btn.btn-black {
   background-color: var(--rs-common-black);
@@ -9513,6 +9513,11 @@ background-color: orangered;
   background: var(--ss-common-white);
   box-shadow: 0px 0px 0px 0px rgba(93.75, 91.10054347826089, 91.10054347826089, 0.5);
 
+}
+.service-item img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
 }
 /* .service-item:hover {
   -webkit-transform: translate(0, 19px);

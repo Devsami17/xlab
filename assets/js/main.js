@@ -727,7 +727,6 @@ let projectsData = [
     { category: 'erp', img: './assets/imgs/portfolio/crp_3.png',a:"https://tacticalmanagement.ae//" },
     { category: 'erp', img: './assets/imgs/portfolio/software_3.png',a:"https://taxqube.co.uk/" },
 ];
-
 var mainBox = document.getElementById("projects_images");
 
 function showprojects(searchitem) {
@@ -735,7 +734,7 @@ function showprojects(searchitem) {
     mainBox.innerHTML = "";
     for (var i = 0; i < temparray.length; i++) {
         mainBox.innerHTML += `<div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 col-12">
-<a href="${temparray[i].a}"><img src="${temparray[i].img}" alt=""></a>
+<a href="${temparray[i].a}" target="_blank"><img src="${temparray[i].img}" alt=""></a>
 </div>`;
     }
 }
