@@ -1,6 +1,6 @@
 (function ($) {
-  "use strict";
-  var windowOn = $(window);
+    "use strict";
+    var windowOn = $(window);
 
 
     /*-----------------------------------------------------------------------------------
@@ -17,8 +17,8 @@
       /*======================================
         Preloader activation
         ========================================*/
-	$(window).on('load', function (event) {
-		$('#preloader').delay(1).fadeOut(500);
+    $(window).on('load', function (event) {
+        $('#preloader').delay(1).fadeOut(500);
 
         /*======================================
         Counter Js
@@ -42,7 +42,7 @@
             });
             wow.init();
         }
-	});
+    });
 
 
     $(".preloader-close").on("click", function () {
@@ -75,70 +75,70 @@
     /*======================================
    Data Css js
    ========================================*/
-    $("[data-background]").each(function() {
+    $("[data-background]").each(function () {
         $(this).css(
             "background-image",
             "url( " + $(this).attr("data-background") + "  )"
         );
     });
 
-    $("[data-width]").each(function() {
+    $("[data-width]").each(function () {
         $(this).css("width", $(this).attr("data-width"));
     });
 
-    $("[data-bg-color]").each(function() {
+    $("[data-bg-color]").each(function () {
         $(this).css("background-color", $(this).attr("data-bg-color"));
     });
 
-  /*======================================
-	Mobile Menu Js
-	========================================*/
-  $("#mobile-menu").meanmenu({
-    meanMenuContainer: ".mobile-menu",
-    meanScreenWidth: "991",
-    meanExpand: ['<i class="fa-regular fa-angle-right"></i>'],
-  });
+    /*======================================
+      Mobile Menu Js
+      ========================================*/
+    $("#mobile-menu").meanmenu({
+        meanMenuContainer: ".mobile-menu",
+        meanScreenWidth: "991",
+        meanExpand: ['<i class="fa-regular fa-angle-right"></i>'],
+    });
 
-  /*======================================
-	Sidebar Toggle
-	========================================*/
-  $(".offcanvas__close,.offcanvas__overlay").on("click", function () {
-    $(".offcanvas__area").removeClass("info-open");
-    $(".offcanvas__overlay").removeClass("overlay-open");
-  });
-  // Scroll to bottom then close navbar
-  $(window).scroll(function(){
-    if($("body").scrollTop() > 0 || $("html").scrollTop() > 0) {
+    /*======================================
+      Sidebar Toggle
+      ========================================*/
+    $(".offcanvas__close,.offcanvas__overlay").on("click", function () {
         $(".offcanvas__area").removeClass("info-open");
         $(".offcanvas__overlay").removeClass("overlay-open");
-    }
-  });
-  $(".sidebar__toggle").on("click", function () {
-    $(".offcanvas__area").addClass("info-open");
-    $(".offcanvas__overlay").addClass("overlay-open");
-  });
+    });
+    // Scroll to bottom then close navbar
+    $(window).scroll(function () {
+        if ($("body").scrollTop() > 0 || $("html").scrollTop() > 0) {
+            $(".offcanvas__area").removeClass("info-open");
+            $(".offcanvas__overlay").removeClass("overlay-open");
+        }
+    });
+    $(".sidebar__toggle").on("click", function () {
+        $(".offcanvas__area").addClass("info-open");
+        $(".offcanvas__overlay").addClass("overlay-open");
+    });
 
-  /*======================================
-	Body overlay Js
-	========================================*/
-  $(".body-overlay").on("click", function () {
-    $(".offcanvas__area").removeClass("opened");
-    $(".body-overlay").removeClass("opened");
-  });
+    /*======================================
+      Body overlay Js
+      ========================================*/
+    $(".body-overlay").on("click", function () {
+        $(".offcanvas__area").removeClass("opened");
+        $(".body-overlay").removeClass("opened");
+    });
 
 
 
-  /*======================================
-	Sticky Header Js
-	========================================*/
+    /*======================================
+      Sticky Header Js
+      ========================================*/
 
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 10) {
-      $("#header-sticky").addClass("rs-sticky");
-    } else {
-      $("#header-sticky").removeClass("rs-sticky");
-    }
-  });
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 10) {
+            $("#header-sticky").addClass("rs-sticky");
+        } else {
+            $("#header-sticky").removeClass("rs-sticky");
+        }
+    });
 
     /*** pricing table */
     const pricingMonthlyBtn = $("#monthly-btn"),
@@ -218,27 +218,27 @@
         page_ah_cursor();
     }
 
-  /*======================================
-	MagnificPopup image view
-	========================================*/
-  $(".popup-image").magnificPopup({
-    type: "image",
-    gallery: {
-      enabled: true,
-    },
-  });
+    /*======================================
+      MagnificPopup image view
+      ========================================*/
+    $(".popup-image").magnificPopup({
+        type: "image",
+        gallery: {
+            enabled: true,
+        },
+    });
 
-  /*======================================
-	MagnificPopup video view
-	========================================*/
-  $(".popup-video").magnificPopup({
-    type: "iframe",
-  });
+    /*======================================
+      MagnificPopup video view
+      ========================================*/
+    $(".popup-video").magnificPopup({
+        type: "iframe",
+    });
 
-  /*======================================
-	Button scroll up js
-	========================================*/
-  
+    /*======================================
+      Button scroll up js
+      ========================================*/
+
     var progressPath = document.querySelector(".backtotop-wrap path");
     var pathLength = progressPath.getTotalLength();
     progressPath.style.transition = progressPath.style.WebkitTransition =
@@ -248,7 +248,7 @@
     progressPath.getBoundingClientRect();
     progressPath.style.transition = progressPath.style.WebkitTransition =
         "stroke-dashoffset 10ms linear";
-    var updateProgress = function() {
+    var updateProgress = function () {
         var scroll = $(window).scrollTop();
         var height = $(document).height() - $(window).height();
         var progress = pathLength - (scroll * pathLength) / height;
@@ -258,28 +258,28 @@
     $(window).scroll(updateProgress);
     var offset = 150;
     var duration = 550;
-    jQuery(window).on("scroll", function() {
+    jQuery(window).on("scroll", function () {
         if (jQuery(this).scrollTop() > offset) {
             jQuery(".backtotop-wrap").addClass("active-progress");
         } else {
             jQuery(".backtotop-wrap").removeClass("active-progress");
         }
     });
-    jQuery(".backtotop-wrap").on("click", function(event) {
+    jQuery(".backtotop-wrap").on("click", function (event) {
         event.preventDefault();
         jQuery("html, body").animate({
             scrollTop: 0
         }, duration);
         return false;
     });
-    
+
     /*======================================
-	One Page Scroll Js
-	========================================*/
+    One Page Scroll Js
+    ========================================*/
     /*** Scroll Nav */
     var link = $('#mobile-menu ul li a, .mean-nav ul li a');
 
-    link.on('click', function(e) {
+    link.on('click', function (e) {
         var target = $($(this).attr('href'));
         $('html, body').animate({
             scrollTop: target.offset().top - 76
@@ -288,17 +288,17 @@
         e.preventDefault();
     });
 
-    $(window).on('scroll', function(){
+    $(window).on('scroll', function () {
         scrNav();
     });
 
     function scrNav() {
         var sTop = $(window).scrollTop();
-        $('section').each(function() {
+        $('section').each(function () {
             var id = $(this).attr('id'),
-                offset = $(this).offset().top-1,
+                offset = $(this).offset().top - 1,
                 height = $(this).height();
-            if(sTop >= offset && sTop < offset + height) {
+            if (sTop >= offset && sTop < offset + height) {
                 link.parent().removeClass('active');
                 $('.main-menu').find('[href="#' + id + '"]').parent().addClass('active');
             }
@@ -307,8 +307,8 @@
     scrNav();
 
     /*======================================
-	Smoth animatio Js
-	========================================*/
+    Smoth animatio Js
+    ========================================*/
     $(document).on('click', '.smoth-animation', function (event) {
         event.preventDefault();
         $('html, body').animate({
@@ -316,9 +316,9 @@
         }, 300);
     });
 
-  /*======================================
-  Parallax Swiper
-  ========================================*/
+    /*======================================
+    Parallax Swiper
+    ========================================*/
     var parallaxSlider;
     var parallaxSliderOptions = {
         speed: 1500,
@@ -327,18 +327,18 @@
         },
         parallax: true,
         loop: true,
-    
+
         pagination: {
             el: ".rs-slider-dot",
             clickable: true,
         },
-    
+
         navigation: {
             nextEl: ".slider__button-prev",
             prevEl: ".slider__button-next",
         },
         on: {
-            init: function() {
+            init: function () {
                 var swiper = this;
                 for (var i = 0; i < swiper.slides.length; i++) {
                     $(swiper.slides[i])
@@ -348,7 +348,7 @@
                         });
                 }
             },
-            resize: function() {
+            resize: function () {
                 this.update();
             },
         },
@@ -423,17 +423,17 @@
             },
         },
     });
-    
+
     /*** carouselTicker initail */
-      $('.carouselTicker-nav').carouselTicker({
-      });
+    $('.carouselTicker-nav').carouselTicker({
+    });
 
     /*banner-4-active***/
     var brand = new Swiper(".banner-4-active", {
         slidesPerView: 1,
-            spaceBetween: 0,
-            loop: true,  
-            autoplay: {
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
             delay: 5000,
         },
         pagination: {
@@ -445,9 +445,9 @@
     /*banner-5-active***/
     var brand = new Swiper(".banner-5-active", {
         slidesPerView: 1,
-            spaceBetween: 0,
-            loop: true,  
-            autoplay: {
+        spaceBetween: 0,
+        loop: true,
+        autoplay: {
             delay: 5000,
         },
         pagination: {
@@ -455,9 +455,9 @@
             clickable: true
         },
     });
- 
-     /*brand__active***/
-     var brand = new Swiper(".our-client__active", {
+
+    /*brand__active***/
+    var brand = new Swiper(".our-client__active", {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
@@ -534,7 +534,7 @@
     /*======================================
       clients-testomonial__active
       ========================================*/
-      var feedbackThree = new Swiper(".clients-testomonial__active", {
+    var feedbackThree = new Swiper(".clients-testomonial__active", {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
@@ -618,17 +618,17 @@
             },
         },
     });
-    
+
     /*======================================
     latest-gallery__active js
     ========================================*/
     var latest_gallery__active = new Swiper(".home-4-latest-gallery__active", {
         speed: 1000,
-		loop: true,
-		slidesPerView: 5,
-		autoplay: true,
-		spaceBetween: 30,
-        
+        loop: true,
+        slidesPerView: 5,
+        autoplay: true,
+        spaceBetween: 30,
+
         pagination: {
             el: ".rs-swiper-dot",
             clickable: true,
@@ -649,12 +649,12 @@
         },
     });
 
-    $(".work-process__item button").on("click", function() {
+    $(".work-process__item button").on("click", function () {
         $(".work-process__item").removeClass("active");
         $(this).closest(".work-process__item").addClass("active");
     });
 
-    $("[data-after-color]").each(function() {
+    $("[data-after-color]").each(function () {
         $(this).css("color", $(this).attr("data-after-color"));
     });
 
@@ -735,7 +735,7 @@ function setActive(event) {
 }
 
 // Show 'Website' projects by default on page load
-window.onload = function() {
+window.onload = function () {
     showprojects('Website');
 
     // Set the initial active class
@@ -747,26 +747,26 @@ window.onload = function() {
 
 document.querySelectorAll(".accordion-item").forEach((item) => {
     item.querySelector(".accordion-item-header").addEventListener("click", () => {
-      item.classList.toggle("open");
+        item.classList.toggle("open");
     });
-  });
-  
+});
 
 
-  var a = document.getElementById('hiring');
-  function hire(value){
+
+var a = document.getElementById('hiring');
+function hire(value) {
     a.value = value;
-  }
-  function pricingSelect(event){
+}
+function pricingSelect(event) {
     event.preventDefault(); // Prevent the default action of the anchor tag
     const element = event.target; // Get the clicked element
-    
+
     // Remove the class from all buttons
     const buttons = document.querySelectorAll('ul a');
     buttons.forEach(button => {
         button.classList.remove('latest-pricing_section_active');
     });
-    
+
     // Add the class to the clicked button
     element.classList.add('latest-pricing_section_active');
 }
@@ -789,9 +789,9 @@ function opentab(button) {
 var mainBox2 = document.getElementById('pricingboxs');
 
 
-function pricingweb(){
+function pricingweb() {
     mainBox2.innerHTML = ' ';
-    mainBox2.innerHTML=` <div class="col-lg-4 col-md-6 pack-item">
+    mainBox2.innerHTML = ` <div class="col-lg-4 col-md-6 pack-item">
 
     <div class="pack-inn">
 
@@ -938,7 +938,7 @@ function pricingweb(){
 
         <div class="pack-header">
 
-            <h3 class="pack-name">Start Up Website 
+            <h3 class="pack-name">Elite Website 
 
                 Package
 
@@ -952,7 +952,7 @@ function pricingweb(){
             <i class="best-seller">
                 <img src="assets/imgs/hire-us/bestseller.png" alt="">
             </i>
-            <h4 class="pack-amt"><sup>$</sup>299 
+            <h4 class="pack-amt"><sup>$</sup>1,324
             </h4>
 
         </div>
@@ -965,71 +965,44 @@ function pricingweb(){
 
                     <ul>
 
+                                    <li>Up to 25 Custom Pages Website</li>
+                                    <li>Unique Interactive, Dynamic &amp; High End Design</li>
+                                    <li>Custom WP (OR) Custom PHP Development</li>
+                                    <li>CMS (Content Management System)/Admin Panel</li>
+                                    <li>Special Striking Hover Effects</li>
+                                    <li>Liquid Responsive Layout </li>
+                                    <li>Multi Lingual (Optional)</li>
+                                    <li>Online Reservation/Appointment Tool (Optional)</li>
+                                    <li>Online Payment Gateway Integration (Optional)</li>
+                                    <li>Book A Call CTA Form</li>
+                                    <li>Custom Dynamic CTA Forms</li>
+                                    <li>Lead Capture CTA Forms</li>
+                                    <li>Signup Area (For Newsletters, Offers etc.)</li>
+                                    <li>Search Bar </li>
+                                    <li>User Login </li>
+                                    <li>Multiple Custom Banner Designs</li>
+                                    <li>jQuery Slider</li>
+                                    <li>Multiple Stock Images (Industry Specific)</li>
+                                    <li>Unlimited Revisions</li>
+                                    <li>Live Feeds of Social Networks integration (Optional)</li>
+                                    <li>Google Friendly Sitemap</li>
+                                    <li>Search Engine Submission</li>
+                                    <li>Google Analytics Installation</li>
+                                    <li>Complete W3C Certified HTML</li>
+                                    <li>Industry Specified Team of Expert Designers and Developers</li>
+                                    <li>Complete Deployment</li>
+                                    <li>Dedicated Accounts Manager</li>
+                                    <li>Ownership Rights</li>
+                                    <li>Satisfaction Guarantee</li>
+                                    <li>Unique Design Guarantee</li>
+                                    <li>Money Back Guarantee</li>
+                                    <li>- Add on</li>
+                                    <li>-- On Page &amp; Technical SEO for £225</li>
 
 
 
 
-                        <li>Up to 5 Page Website</li>
-
-
-
-                        <li>Up to 5 Stock Images (Industry Specific)</li>
-
-
-
-                        <li>Contact Form</li>
-
-
-
-                        <li>jQuery Slider</li>
-
-
-
-                        <li>3 Banner Designs</li>
-
-
-
-                        <li>Google Friendly Sitemap</li>
-
-
-
-                        <li>Complete W3C Certified HTML</li>
-
-
-
-                        <li>48 to 72 hours TAT</li>
-
-
-
-                        <li>Satisfaction Guarantee</li>
-
-
-
-                        <li>Unique Design Guarantee</li>
-
-
-
-                        <li>Money Back Guarantee *</li>
-
-
-
-                        <li>- Add On</li>
-
-
-
-                        <li>-- Mobile Responsive for $125</li>
-
-
-
-                        <li>-- CMS for Additional $150</li>
-
-
-
-
-
-
-
-                    </ul>
+                                 </ul>
 
                 </div>
                 <div id="mCSB_6_scrollbar_vertical"
@@ -1081,7 +1054,7 @@ function pricingweb(){
 
         <div class="pack-header">
 
-            <h3 class="pack-name">Start Up Website 
+            <h3 class="pack-name">Professional Website 
 
                 Package
 
@@ -1093,7 +1066,7 @@ function pricingweb(){
 
         <div class="pack-price">
 
-            <h4 class="pack-amt"><sup>$</sup>299 
+            <h4 class="pack-amt"><sup>$</sup>544
             </h4>
 
         </div>
@@ -1106,67 +1079,25 @@ function pricingweb(){
 
                     <ul>
 
+                                    <li>Up to 10 Unique Pages Website</li>
+                                    <li>CMS (Content Management System)/Admin Panel </li>
+                                    <li>Contact us Form</li>
+                                    <li>Online Appointment Scheduling CTA Form</li>
+                                    <li>Book A Call CTA Form</li>
+                                    <li>Up to 10 Stock images (Industry Specific)</li>
+                                    <li>5 Custom Banner Designs</li>
+                                    <li>jQuery Slider Banner</li>
+                                    <li>FREE Google Friendly Sitemap</li>
+                                    <li>Complete W3C Certified HTML</li>
+                                    <li>48 to 72 hours TAT</li>
+                                    <li>Complete Deployment</li>
+                                    <li>100% Satisfaction Guarantee</li>
+                                    <li>100% Unique Design Guarantee</li>
+                                    <li>100% Money Back Guarantee</li>
+                                    <li>- Add on </li>
+                                    <li>-- Mobile Responsive for Additional £125</li>
 
-
-
-
-                        <li>Up to 5 Page Website</li>
-
-
-
-                        <li>Up to 5 Stock Images (Industry Specific)</li>
-
-
-
-                        <li>Contact Form</li>
-
-
-
-                        <li>jQuery Slider</li>
-
-
-
-                        <li>3 Banner Designs</li>
-
-
-
-                        <li>Google Friendly Sitemap</li>
-
-
-
-                        <li>Complete W3C Certified HTML</li>
-
-
-
-                        <li>48 to 72 hours TAT</li>
-
-
-
-                        <li>Satisfaction Guarantee</li>
-
-
-
-                        <li>Unique Design Guarantee</li>
-
-
-
-                        <li>Money Back Guarantee *</li>
-
-
-
-                        <li>- Add On</li>
-
-
-
-                        <li>-- Mobile Responsive for $125</li>
-
-
-
-                        <li>-- CMS for Additional $150</li>
-
-
-
-
+                                 </ul>
 
 
 
@@ -1222,7 +1153,7 @@ function pricingweb(){
 
         <div class="pack-header">
 
-            <h3 class="pack-name">Start Up Website 
+            <h3 class="pack-name">Business Website 
 
                 Package
 
@@ -1234,7 +1165,7 @@ function pricingweb(){
 
         <div class="pack-price">
 
-            <h4 class="pack-amt"><sup>$</sup>299 
+            <h4 class="pack-amt"><sup>$</sup>1,824
             </h4>
 
         </div>
@@ -1247,71 +1178,44 @@ function pricingweb(){
 
                     <ul>
 
+                    <li>Custom 2D Explainer Video Animation </li>
+                    <li>Voice Over &amp; Sound Effects</li>
+                    <li>Professional Script Writing</li>
+                    <li>Storyboard Creation</li>
+                    <li>Unlimited Pages Website</li>
+                    <li>UI / UX Interactive &amp; Dynamic HD Design</li>
+                    <li>SEO Meta Tags</li>
+                    <li>Liquid Responsive </li>
+                    <li>Custom WP (or) Custom PHP Development</li>
+                    <li>jQuery Slider Banner</li>
+                    <li>Custom Made Banner Designs</li>
+                    <li>Multiple Stock Images</li>
+                    <li>Unlimited Revisions</li>
+                    <li>Special Hoover Effects</li>
+                    <li>Content Management System (CMS)</li>
+                    <li>Online Appointment/Scheduling/Online Ordering Integration (Optional)</li>
+                    <li>Online Payment Integration (Optional)</li>
+                    <li>Multi Lingual (Optional)</li>
+                    <li>Custom Dynamic Forms (Optional)</li>
+                    <li>Signup Area (For Newsletters, Offers etc.)</li>
+                    <li>Search Bar</li>
+                    <li>Live Feeds of Social Networks integration (Optional)</li>
+                    <li>Google Friendly Sitemap</li>
+                    <li>Image alt text</li>
+                    <li>Seo Internal Linking</li>
+                    <li>Search Engine Submission</li>
+                    <li>Complete W3C Certified HTML</li>
+                    <li>Industry Specified Team of Expert Designers and Developers</li>
+                    <li>Complete Deployment</li>
+                    <li>Dedicated Accounts Manager</li>
+                    <li>100% Ownership Rights</li>
+                    <li>100% Satisfaction Guarantee</li>
+                    <li>100% Unique Design Guarantee</li>
+                    <li>100% Money Back Guarantee </li>
+                    <li> FREE On Page &amp; Technical SEO</li>
 
 
-
-
-                        <li>Up to 5 Page Website</li>
-
-
-
-                        <li>Up to 5 Stock Images (Industry Specific)</li>
-
-
-
-                        <li>Contact Form</li>
-
-
-
-                        <li>jQuery Slider</li>
-
-
-
-                        <li>3 Banner Designs</li>
-
-
-
-                        <li>Google Friendly Sitemap</li>
-
-
-
-                        <li>Complete W3C Certified HTML</li>
-
-
-
-                        <li>48 to 72 hours TAT</li>
-
-
-
-                        <li>Satisfaction Guarantee</li>
-
-
-
-                        <li>Unique Design Guarantee</li>
-
-
-
-                        <li>Money Back Guarantee *</li>
-
-
-
-                        <li>- Add On</li>
-
-
-
-                        <li>-- Mobile Responsive for $125</li>
-
-
-
-                        <li>-- CMS for Additional $150</li>
-
-
-
-
-
-
-
-                    </ul>
+                 </ul>
 
                 </div>
                 <div id="mCSB_6_scrollbar_vertical"
@@ -1363,7 +1267,7 @@ function pricingweb(){
 
         <div class="pack-header">
 
-            <h3 class="pack-name">Start Up Website 
+            <h3 class="pack-name">Identify Website 
 
                 Package
 
@@ -1377,7 +1281,7 @@ function pricingweb(){
 <i class="best-seller">
 <img src="assets/imgs/hire-us/bestseller.png" alt="">
 </i>
-            <h4 class="pack-amt"><sup>$</sup>299 
+            <h4 class="pack-amt"><sup>$</sup>924
             </h4>
 
         </div>
@@ -1390,71 +1294,34 @@ function pricingweb(){
 
                     <ul>
 
+                    <li>Up to 15 Custom Pages Website</li>
+                    <li>Mobile Responsive</li>
+                    <li>CMS (Content Management System)/Admin Panel</li>
+                    <li>Conceptual and Dynamic Design</li>
+                    <li>Striking Hover Effects</li>
+                    <li>Online Reservation/Appointment Tool (Optional)</li>
+                    <li>Online Payment Gateway Integration (Optional)</li>
+                    <li>Book A Call CTA Form</li>
+                    <li>Custom Contact Forms</li>
+                    <li>Lead Capturing Forms &amp; CTA</li>
+                    <li>Newsletter Subscription CTA (Optional)</li>
+                    <li>Newsfeed Integration</li>
+                    <li>Social Media Integration</li>
+                    <li>Search Engine Submission</li>
+                    <li>Multiple Stock Images (Industry Specified)</li>
+                    <li>Custom Unique Banner Designs</li>
+                    <li>jQuery Slider</li>
+                    <li>Complete W3C Certified HTML</li>
+                    <li>48 to 72 hours TAT</li>
+                    <li>Complete Deployment</li>
+                    <li>Satisfaction Guarantee</li>
+                    <li>Unique Design Guarantee</li>
+                    <li>Money Back Guarantee</li>
+                    <li>- Add on</li>
+                    <li>-- On Page &amp; Technical SEO for £225 </li>
 
 
-
-
-                        <li>Up to 5 Page Website</li>
-
-
-
-                        <li>Up to 5 Stock Images (Industry Specific)</li>
-
-
-
-                        <li>Contact Form</li>
-
-
-
-                        <li>jQuery Slider</li>
-
-
-
-                        <li>3 Banner Designs</li>
-
-
-
-                        <li>Google Friendly Sitemap</li>
-
-
-
-                        <li>Complete W3C Certified HTML</li>
-
-
-
-                        <li>48 to 72 hours TAT</li>
-
-
-
-                        <li>Satisfaction Guarantee</li>
-
-
-
-                        <li>Unique Design Guarantee</li>
-
-
-
-                        <li>Money Back Guarantee *</li>
-
-
-
-                        <li>- Add On</li>
-
-
-
-                        <li>-- Mobile Responsive for $125</li>
-
-
-
-                        <li>-- CMS for Additional $150</li>
-
-
-
-
-
-
-
-                    </ul>
+                 </ul>
 
                 </div>
                 <div id="mCSB_6_scrollbar_vertical"
@@ -1503,7 +1370,7 @@ function pricingweb(){
 }
 
 
-function pricinglogo(){
+function pricinglogo() {
     mainBox2.innerHTML = "";
     mainBox2.innerHTML = `
     <div class="col-lg-4 col-md-6 pack-item">
@@ -1512,7 +1379,7 @@ function pricinglogo(){
 
                             <div class="pack-header">
 
-                                <h3 class="pack-name">Start Up Logo
+                                <h3 class="pack-name">Basic Logo
 
                                     Package
 
@@ -1617,7 +1484,7 @@ function pricinglogo(){
 
                         <div class="pack-price">
 
-                            <h4 class="pack-amt"><sup>$</sup>35.5
+                            <h4 class="pack-amt"><sup>$</sup>65.00
                             </h4>
 
                         </div>
@@ -1629,23 +1496,14 @@ function pricinglogo(){
                                     style="position:relative; top:0; left:0;" dir="ltr">
 
                                     <ul>
-
-
-
-
-
-                                    <li>3 Custom Logo Design Concepts</li>
-                                    <li>1 Dedicated Designer</li>
-                                    <li>4 Revisions</li>
-                                    <li>2 hours TAT</li>
-                                    
-                                    <li>100% Unique Design Guarantee</li>
-                                    <li>100% Satisfaction Guarantee</li>
-                                    <li>100% Money Back Guarantee *</li>
-                                    <li>100% Ownership Rights</li>
-
-
-
+                                    <li>4 Custom Logo Design Concepts</li>
+                                   <li>By 2 Designers</li>
+                                   <li>Unlimited Revisions</li>
+                                   <li>24 to 48 hours TAT</li>
+                                   <li>100% Satisfaction Guarantee</li>
+                                   <li>100% Unique Design Guarantee</li>
+                                   <li>100% Money Back Guarantee*</li>
+                                   <li>100% Ownership Rights</li>
                                     </ul>
 
                                 </div>
@@ -1698,7 +1556,7 @@ function pricinglogo(){
 
                     <div class="pack-header">
 
-                        <h3 class="pack-name">Start Up Logo
+                        <h3 class="pack-name">Professional Up Logo
 
                             Package
 
@@ -1710,7 +1568,7 @@ function pricinglogo(){
 
                     <div class="pack-price">
 
-                        <h4 class="pack-amt"><sup>$</sup>35.5
+                        <h4 class="pack-amt"><sup>$</sup>99.99
                         </h4>
 
                     </div>
@@ -1722,24 +1580,18 @@ function pricinglogo(){
                                 style="position:relative; top:0; left:0;" dir="ltr">
 
                                 <ul>
-
-
-
-
-
-                                <li>3 Custom Logo Design Concepts</li>
-                                <li>1 Dedicated Designer</li>
-                                <li>4 Revisions</li>
-                                <li>2 hours TAT</li>
-                                
-                                <li>100% Unique Design Guarantee</li>
-                                <li>100% Satisfaction Guarantee</li>
-                                <li>100% Money Back Guarantee *</li>
-                                <li>100% Ownership Rights</li>
-
-
-
-                                </ul>
+                                <li>Unlimited Logo Design Concepts</li>
+                           <li>By 4 Industry Based Designers</li>
+                           <li>UNLIMITED Revisions</li>
+                           <li>FREE MS Electronic Letterhead</li>
+                           <li>FREE Custom Stationery Design (Letterhead, Business Card, Envelope)</li>
+                           <li>24 to 48 hours TAT</li>
+                           <li>FREE File Formats (EPS, Ai, GIF, JPEG, PSD)</li>
+                           <li>100% Satisfaction Guarantee</li>
+                           <li>100% Unique Design Guarantee</li>
+                           <li>100% Money Back Guarantee</li>
+                           <li>100% Ownership Rights</li>
+                            </ul>
 
                             </div>
                             <div id="mCSB_6_scrollbar_vertical"
@@ -1791,7 +1643,7 @@ function pricinglogo(){
 
                 <div class="pack-header">
 
-                    <h3 class="pack-name">Start Up Logo
+                    <h3 class="pack-name">Business Up Logo
 
                         Package
 
@@ -1803,7 +1655,7 @@ function pricinglogo(){
 
                 <div class="pack-price">
 
-                    <h4 class="pack-amt"><sup>$</sup>35.5
+                    <h4 class="pack-amt"><sup>$</sup>149.99
                     </h4>
 
                 </div>
@@ -1815,25 +1667,20 @@ function pricinglogo(){
                             style="position:relative; top:0; left:0;" dir="ltr">
 
                             <ul>
-
-
-
-
-
-                            <li>3 Custom Logo Design Concepts</li>
-                            <li>1 Dedicated Designer</li>
-                            <li>4 Revisions</li>
-                            <li>2 hours TAT</li>
-                            
-                            <li>100% Unique Design Guarantee</li>
-                            <li>100% Satisfaction Guarantee</li>
-                            <li>100% Money Back Guarantee *</li>
-                            <li>100% Ownership Rights</li>
-
-
-
-                            </ul>
-
+                            <li>UNLIMITED Logo Design Concepts</li>
+                       <li>By 8 Award Winning Designers</li>
+                       <li>Free Icon Design</li>
+                       <li>FREE Custom Stationery Design (Letterhead, Business Card, Envelope, Invoice)</li>
+                       <li>Double Side Flyer (OR) Bi-Fold Brochure</li>
+                       <li>FREE MS Electronic Letterhead</li>
+                       <li>Email Signature Design</li>
+                       <li>UNLIMITED Revisions</li>
+                       <li>48 to 72 hours TAT</li>
+                       <li>100% Satisfaction Guarantee</li>
+                       <li>100% Unique Design Guarantee</li>
+                       <li>100% Money Back Guarantee</li>
+                       <li>100% Ownership Rights</li>
+                        </ul>
                         </div>
                         <div id="mCSB_6_scrollbar_vertical"
                             class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
@@ -1884,7 +1731,7 @@ function pricinglogo(){
 
             <div class="pack-header">
 
-                <h3 class="pack-name">Start Up Logo
+                <h3 class="pack-name">Logo & Web
 
                     Package
 
@@ -1898,7 +1745,7 @@ function pricinglogo(){
             <i class="best-seller">
             <img src="assets/imgs/hire-us/bestseller.png" alt="">
         </i>
-                <h4 class="pack-amt"><sup>$</sup>35.5
+                <h4 class="pack-amt"><sup>$</sup>249.99
                 </h4>
 
             </div>
@@ -1910,25 +1757,23 @@ function pricinglogo(){
                         style="position:relative; top:0; left:0;" dir="ltr">
 
                         <ul>
-
-
-
-
-
-                        <li>3 Custom Logo Design Concepts</li>
-                        <li>1 Dedicated Designer</li>
-                        <li>4 Revisions</li>
-                        <li>2 hours TAT</li>
-                        
-                        <li>100% Unique Design Guarantee</li>
-                        <li>100% Satisfaction Guarantee</li>
-                        <li>100% Money Back Guarantee *</li>
-                        <li>100% Ownership Rights</li>
-
-
-
-                        </ul>
-
+                                    <li>UNLIMITED Logo Design Concepts</li>
+                                    <li>By 8 Award Winning Designers</li>
+                                    <li>Icon Design</li>
+                                    <li>UNLIMITED Revisions</li>
+                                    <li>2 Stationary Design Sets (Business Card, Letterhead, Envelope)</li>
+                                    <li>FREE MS Word Letterhead</li>
+                                    <li>Free Email Signature</li>
+                                    <li>3 Page Custom Website</li>
+                                    <li>2 Stock Photos</li>
+                                    <li>2 Banner Designs</li>
+                                    <li>jQuery Slider</li>
+                                    <li>All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)</li>
+                                    <li>100% Ownership Rights</li>
+                                    <li>100% Satisfaction Guarantee</li>
+                                    <li>100% Unique Design Guarantee</li>
+                                    <li>100% Money Back Guarantee *</li>
+                                 </ul>
                     </div>
                     <div id="mCSB_6_scrollbar_vertical"
                         class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
@@ -1975,7 +1820,7 @@ function pricinglogo(){
     </div>
     `;
 }
-function pricingillustration(){
+function pricingillustration() {
     mainBox2.innerHTML = "";
     mainBox2.innerHTML = `
     <div class="col-lg-4 col-md-6 pack-item">
@@ -1984,7 +1829,7 @@ function pricingillustration(){
 
         <div class="pack-header">
 
-            <h3 class="pack-name">Start Up Illustrative
+            <h3 class="pack-name">Beginners Illustrative
 
                 Package
 
@@ -2080,7 +1925,7 @@ function pricingillustration(){
 
     <div class="pack-header">
 
-        <h3 class="pack-name">Start Up Illustrative
+        <h3 class="pack-name">Professional Illustrative
 
             Package
 
@@ -2092,7 +1937,7 @@ function pricingillustration(){
 
     <div class="pack-price">
 
-        <h4 class="pack-amt"><sup>$</sup>195
+        <h4 class="pack-amt"><sup>$</sup>265
         </h4>
 
     </div>
@@ -2105,26 +1950,23 @@ function pricingillustration(){
 
                 <ul>
 
+                     <li>UNLIMITED Logo Design Concepts</li>
 
+                     <li>By 4 Designers</li>
 
+                     <li>UNLIMITED Revisions</li>
 
+                     <li>24 to 48 hours TAT</li>
 
-                <li> 4 Custom Logo Design Concepts</li>
-                <li> By 3 Designers</li>
-                <li> 48 to 72 hours TAT</li>
-                <li> UNLIMITED Revisions</li>
-                <li> All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)</li>
-                <li> 100% Ownership Rights</li>
-                <li> 100% Satisfaction Guarantee</li>
-                <li> 100% Unique Design Guarantee</li>
-                <li> 100% Money Back Guarantee</li>
+                     <li>100% Ownership Rights</li>
 
+                     <li>100% Satisfaction Guarantee</li>
 
+                     <li>100% Unique Design Guarantee</li>
 
+                     <li>100% Money Back Guarantee</li>
 
-
-
-                </ul>
+                  </ul>
 
             </div>
             <div id="mCSB_6_scrollbar_vertical"
@@ -2176,7 +2018,7 @@ function pricingillustration(){
 
     <div class="pack-header">
 
-        <h3 class="pack-name">Start Up Illustrative
+        <h3 class="pack-name">3D Logo 
 
             Package
 
@@ -2188,7 +2030,7 @@ function pricingillustration(){
 
     <div class="pack-price">
 
-        <h4 class="pack-amt"><sup>$</sup>195
+        <h4 class="pack-amt"><sup>$</sup>365
         </h4>
 
     </div>
@@ -2203,24 +2045,37 @@ function pricingillustration(){
 
 
 
+                <li> 3 Unique 3D Logo Concepts</li>
 
+                <li> Light Effects and VFX</li>
 
-                <li> 4 Custom Logo Design Concepts</li>
-                <li> By 3 Designers</li>
-                <li> 48 to 72 hours TAT</li>
+                <li> Fully Rendered</li>
+
+                <li> Multiple 3D Angles</li>
+
+                <li> 3 Award Winning Designers</li>
+
+                <li> Dedicated Project Manager</li>
+
+                <li> 72 hours Turnaround Time</li>
+
                 <li> UNLIMITED Revisions</li>
-                <li> All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)</li>
+
                 <li> 100% Ownership Rights</li>
+
                 <li> 100% Satisfaction Guarantee</li>
+
                 <li> 100% Unique Design Guarantee</li>
-                <li> 100% Money Back Guarantee</li>
+
+                <li> 100% Satisfaction Guarantee</li>
+
+                <li> 100% Money Back Guarantee </li>
 
 
 
 
 
-
-                </ul>
+             </ul>
 
             </div>
             <div id="mCSB_6_scrollbar_vertical"
@@ -2272,7 +2127,7 @@ function pricingillustration(){
 
     <div class="pack-header">
 
-        <h3 class="pack-name">Start Up Illustrative
+        <h3 class="pack-name">3D Animated Logo
 
             Package
 
@@ -2286,7 +2141,7 @@ function pricingillustration(){
     <i class="best-seller">
     <img src="assets/imgs/hire-us/bestseller.png" alt="">
 </i>
-        <h4 class="pack-amt"><sup>$</sup>195
+        <h4 class="pack-amt"><sup>$</sup>445
         </h4>
 
     </div>
@@ -2296,29 +2151,48 @@ function pricingillustration(){
             tabindex="0" style="max-height: none;">
             <div id="mCSB_6_container" class="mCSB_container"
                 style="position:relative; top:0; left:0;" dir="ltr">
-
                 <ul>
 
 
 
 
 
-                <li> 4 Custom Logo Design Concepts</li>
-                <li> By 3 Designers</li>
-                <li> 48 to 72 hours TAT</li>
+                <li> 3 TO 5  Custom Concepts</li>
+
+                <li> LOGO ANIMATION </li>
+
+                <li> ILLUSTRATION</li>
+
+                <li> 2D OR 3D </li>
+
+                <li> Light Effects and VFX</li>
+
+                <li> Fully Rendered</li>
+
+                <li> MultipleAngles</li>
+
+                <li> By 3 Award Winning Designers</li>
+
+                <li> 72 hours Turnaround Time</li>
+
                 <li> UNLIMITED Revisions</li>
-                <li> All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)</li>
+
                 <li> 100% Ownership Rights</li>
+
                 <li> 100% Satisfaction Guarantee</li>
+
                 <li> 100% Unique Design Guarantee</li>
-                <li> 100% Money Back Guarantee</li>
+
+                <li> 100% Satisfaction Guarantee</li>
+
+                <li> 100% Money Back Guarantee </li>
 
 
 
 
 
-
-                </ul>
+             </ul>
+   
 
             </div>
             <div id="mCSB_6_scrollbar_vertical"
@@ -2364,105 +2238,12 @@ function pricingillustration(){
 </div>
 
 </div>
-<div class="col-lg-4 col-md-6 pack-item">
 
-<div class="pack-inn">
-
-    <div class="pack-header">
-
-        <h3 class="pack-name">Start Up Illustrative
-
-            Package
-
-        </h3>
-
-      
-
-    </div>
-
-    <div class="pack-price">
-
-        <h4 class="pack-amt"><sup>$</sup>195
-        </h4>
-
-    </div>
-
-    <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
-        <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
-            tabindex="0" style="max-height: none;">
-            <div id="mCSB_6_container" class="mCSB_container"
-                style="position:relative; top:0; left:0;" dir="ltr">
-
-                <ul>
-
-
-
-
-
-                <li> 4 Custom Logo Design Concepts</li>
-                <li> By 3 Designers</li>
-                <li> 48 to 72 hours TAT</li>
-                <li> UNLIMITED Revisions</li>
-                <li> All Final Files Format (AI, PSD, EPS, PNG, GIF, JPG, PDF)</li>
-                <li> 100% Ownership Rights</li>
-                <li> 100% Satisfaction Guarantee</li>
-                <li> 100% Unique Design Guarantee</li>
-                <li> 100% Money Back Guarantee</li>
-
-
-
-
-
-
-                </ul>
-
-            </div>
-            <div id="mCSB_6_scrollbar_vertical"
-                class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
-                style="display: block;">
-                <div class="mCSB_draggerContainer">
-                    <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
-                        style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
-                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-                    </div>
-                    <div class="mCSB_draggerRail"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="pack-btn">
-
-        <ul>
-
-            <li><a href="web-requirementsc92d.html?pack=6"
-                    name="Start Up Website Package - $299"
-                    title="Start Up Website Pack For Only $299" class="order_now ">Start
-                    Project</a></li>
-
-          
-
-        </ul>
-
-    </div>
-
-    <div class="pack-lbtn">
-
-        <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
-            277541</a>
-
-        <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
-
-    </div>
-
-</div>
 
 </div>
     `;
 }
-function pricingseo(){
+function pricingseo() {
     mainBox2.innerHTML = " ";
     mainBox2.innerHTML = `
     <div class="col-lg-4 col-md-6 pack-item">
@@ -2585,7 +2366,7 @@ function pricingseo(){
 
                         <div class="pack-header">
 
-                            <h3 class="pack-name">basic Seo
+                            <h3 class="pack-name">Premium Seo
 
                                 Package
 
@@ -2597,7 +2378,7 @@ function pricingseo(){
 
                         <div class="pack-price">
 
-                            <h4 class="pack-amt"><sup>$</sup>999.99
+                            <h4 class="pack-amt"><sup>$</sup>1499.99
                             </h4>
 
                         </div>
@@ -2607,48 +2388,81 @@ function pricingseo(){
                                 tabindex="0" style="max-height: none;">
                                 <div id="mCSB_6_container" class="mCSB_container"
                                     style="position:relative; top:0; left:0;" dir="ltr">
-
                                     <ul>
 
+                                    <li class="heading">Prior Analysis </li>
+
+                                  
+
+                                      <li>Business Analysis</li>
+
+                                      <li>Consumer Analysis </li>
+
+                                      <li>Competitor Analysis </li>
+
+                                      <li>30 Selected Keywords Targeting </li>
+
+                                      <li>30 Pages Keyword Targeted</li>
+
+
+
+                                      <li class="heading">Webpage Optimization </li>
+
+                                      <li>Meta Tags Creation</li>
+
+                                      <li>Keyword Optimization </li>
+
+                                      <li>Image Optimization </li>
+
+                                      <li>Inclusion of anchors</li>
+
+
+
+                                      <li class="heading">Tracking &amp; Analysis </li>
+
+                                      <li>Google Places Inclusions</li>
+
+                                      <li>Google Analytics Installation</li>
+
+                                      <li>Google Webmaster Installation </li>
+
+                                      <li>Call To Action Plan </li>
+
+                                      <li>Creation of Sitemaps</li>
+
+
+
+                                      <li class="heading">Reporting </li>
+
+                                      <li>Monthly Reporting </li>
+
+                                      <li>Recommendation </li>
+
+                                      <li>Email Support </li>
+
+                                      <li>Phone Support</li>
+
+
+
+                                      <li class="heading">Off Page Optimization</li>
+
+                                      <li>Social Bookmarking</li>
+
+                                      <li>Slide Share Marketing </li>
+
+                                      <li>Forums/FAQ’s </li>
+
+                                      <li>Link Building </li>
+
+                                      <li>Directory Submission </li>
+
+                                      <li>Local Business Listings</li>
 
 
 
 
-                                    <li class="heading">Prior Analysis</li>
-                                    <li>Business Analysis</li>
-                                    <li>Consumer Analysis</li>
-                                    <li>Competitor Analysis</li>
-                                    <li>15 Selected Keywords Targeting</li>
-                                    <li>15 Pages Keyword Targeted</li>
-                                    <li class="heading">Webpage Optimization</li>
-                                    <li>Meta Tags Creation</li>
-                                    <li>Keyword Optimization</li>
-                                    <li>Image Optimization</li>
-                                    <li>Inclusion of anchors</li>
-                                    <li class="heading">Tracking &amp; Analysis</li>
-                                    <li>Google Analytics Installation</li>
-                                    <li>Google Webmaster Installation</li>
-                                    <li>Call To Action Plan</li>
-                                    <li>Creation of Sitemaps</li>
-                                    <li class="heading">Reporting</li>
-                                    <li>Monthly Reporting </li>
-                                    <li>Recommendation </li>
-                                    <li>Email Support</li>
-                                    <li>Phone Support</li>
-                                    <li class="heading">Off Page Optimization</li>
-                                    <li>Social Bookmarking</li>
-                                    <li>Slide Share Marketing </li>
-                                    <li>Forums/FAQ’s</li>
-                                    <li>Link Building</li>
-                                    <li>Directory Submission</li>
-                                    <li>Local Business Listings </li>
 
-
-
-
-
-                                    </ul>
-
+                                 </ul>
                                 </div>
                                 <div id="mCSB_6_scrollbar_vertical"
                                     class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
@@ -2699,7 +2513,7 @@ function pricingseo(){
 
                     <div class="pack-header">
 
-                        <h3 class="pack-name">basic Seo
+                        <h3 class="pack-name">Platiunum Seo
 
                             Package
 
@@ -2711,7 +2525,7 @@ function pricingseo(){
 
                     <div class="pack-price">
 
-                        <h4 class="pack-amt"><sup>$</sup>999.99
+                        <h4 class="pack-amt"><sup>$</sup>1999.99
                         </h4>
 
                     </div>
@@ -2724,45 +2538,87 @@ function pricingseo(){
 
                                 <ul>
 
+                                <li class="heading">Prior Analysis </li>
 
-
-
-
-                                <li class="heading">Prior Analysis</li>
                                 <li>Business Analysis</li>
-                                <li>Consumer Analysis</li>
-                                <li>Competitor Analysis</li>
-                                <li>15 Selected Keywords Targeting</li>
-                                <li>15 Pages Keyword Targeted</li>
-                                <li class="heading">Webpage Optimization</li>
+
+                                <li>Consumer Analysis </li>
+
+                                <li>Competitor Analysis </li>
+
+                                <li>70 Selected Keywords Targeting </li>
+
+                                <li>50 Pages Keyword Targeted</li>
+
+
+
+                                <li class="heading">Webpage Optimization </li>
+
                                 <li>Meta Tags Creation</li>
-                                <li>Keyword Optimization</li>
-                                <li>Image Optimization</li>
-                                <li>Inclusion of anchors</li>
-                                <li class="heading">Tracking &amp; Analysis</li>
+
+                                <li>Keyword Optimization </li>
+
+                                <li>Image Optimization </li>
+
+                                <li>Inclusion of anchors Tags </li>
+
+                                <li>Inclusion of anchors Indexing Modifications</li>
+
+
+
+                                <li class="heading">Tracking &amp; Analysis </li>
+
+                                <li>Google Places Inclusions</li>
+
                                 <li>Google Analytics Installation</li>
-                                <li>Google Webmaster Installation</li>
-                                <li>Call To Action Plan</li>
+
+                                <li>Google Webmaster Installation </li>
+
+                                <li>Call To Action Plan </li>
+
                                 <li>Creation of Sitemaps</li>
-                                <li class="heading">Reporting</li>
+
+
+
+                                <li class="heading">Reporting </li>
+
                                 <li>Monthly Reporting </li>
+
                                 <li>Recommendation </li>
-                                <li>Email Support</li>
+
+                                <li>Email Support </li>
+
                                 <li>Phone Support</li>
-                                <li class="heading">Off Page Optimization</li>
+
+
+
+                                <li class="heading">Off Page Optimization </li>
+
                                 <li>Social Bookmarking</li>
+
                                 <li>Slide Share Marketing </li>
-                                <li>Forums/FAQ’s</li>
-                                <li>Link Building</li>
-                                <li>Directory Submission</li>
-                                <li>Local Business Listings </li>
+
+                                <li>Forums/FAQ’s </li>
+
+                                <li>Link Building </li>
+
+                                <li>Directory Submission </li>
+
+                                <li>Local Business Listings</li>
+
+                                <li>Blog Content Creation</li>
+
+                                <li>Local SEO</li>
 
 
 
 
 
-                                </ul>
 
+
+
+
+                          </ul>
                             </div>
                             <div id="mCSB_6_scrollbar_vertical"
                                 class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
@@ -2807,249 +2663,23 @@ function pricingseo(){
                 </div>
 
             </div>
-            <div class="col-lg-4 col-md-6 pack-item">
-
-            <div class="pack-inn">
-
-                <div class="pack-header">
-
-                    <h3 class="pack-name">basic Seo
-
-                        Package
-
-                    </h3>
-
-                  
-
-                </div>
-
-                <div class="pack-price">
-
-                    <h4 class="pack-amt"><sup>$</sup>999.99
-                    </h4>
-
-                </div>
-
-                <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
-                    <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
-                        tabindex="0" style="max-height: none;">
-                        <div id="mCSB_6_container" class="mCSB_container"
-                            style="position:relative; top:0; left:0;" dir="ltr">
-
-                            <ul>
-
-
-
-
-
-                            <li class="heading">Prior Analysis</li>
-                            <li>Business Analysis</li>
-                            <li>Consumer Analysis</li>
-                            <li>Competitor Analysis</li>
-                            <li>15 Selected Keywords Targeting</li>
-                            <li>15 Pages Keyword Targeted</li>
-                            <li class="heading">Webpage Optimization</li>
-                            <li>Meta Tags Creation</li>
-                            <li>Keyword Optimization</li>
-                            <li>Image Optimization</li>
-                            <li>Inclusion of anchors</li>
-                            <li class="heading">Tracking &amp; Analysis</li>
-                            <li>Google Analytics Installation</li>
-                            <li>Google Webmaster Installation</li>
-                            <li>Call To Action Plan</li>
-                            <li>Creation of Sitemaps</li>
-                            <li class="heading">Reporting</li>
-                            <li>Monthly Reporting </li>
-                            <li>Recommendation </li>
-                            <li>Email Support</li>
-                            <li>Phone Support</li>
-                            <li class="heading">Off Page Optimization</li>
-                            <li>Social Bookmarking</li>
-                            <li>Slide Share Marketing </li>
-                            <li>Forums/FAQ’s</li>
-                            <li>Link Building</li>
-                            <li>Directory Submission</li>
-                            <li>Local Business Listings </li>
-
-
-
-
-
-                            </ul>
-
-                        </div>
-                        <div id="mCSB_6_scrollbar_vertical"
-                            class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
-                            style="display: block;">
-                            <div class="mCSB_draggerContainer">
-                                <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
-                                    style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
-                                    <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-                                </div>
-                                <div class="mCSB_draggerRail"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-     
-
-                <div class="pack-btn">
-
-                    <ul>
-
-                        <li><a href="web-requirementsc92d.html?pack=6"
-                                name="Start Up Website Package - $299"
-                                title="Start Up Website Pack For Only $299" class="order_now ">Start
-                                Project</a></li>
-
-                      
-
-                    </ul>
-
-                </div>
-
-                <div class="pack-lbtn">
-
-                    <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
-                        277541</a>
-
-                    <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
-
-                </div>
-
-            </div>
-
-        </div>
-        <div class="col-lg-4 col-md-6 pack-item">
-
-        <div class="pack-inn">
-
-            <div class="pack-header">
-
-                <h3 class="pack-name">basic Seo
-
-                    Package
-
-                </h3>
-
-              
-
-            </div>
-
-            <div class="pack-price">
-
-                <h4 class="pack-amt"><sup>$</sup>999.99
-                </h4>
-
-            </div>
-
-            <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
-                <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
-                    tabindex="0" style="max-height: none;">
-                    <div id="mCSB_6_container" class="mCSB_container"
-                        style="position:relative; top:0; left:0;" dir="ltr">
-
-                        <ul>
-
-
-
-
-
-                        <li class="heading">Prior Analysis</li>
-                        <li>Business Analysis</li>
-                        <li>Consumer Analysis</li>
-                        <li>Competitor Analysis</li>
-                        <li>15 Selected Keywords Targeting</li>
-                        <li>15 Pages Keyword Targeted</li>
-                        <li class="heading">Webpage Optimization</li>
-                        <li>Meta Tags Creation</li>
-                        <li>Keyword Optimization</li>
-                        <li>Image Optimization</li>
-                        <li>Inclusion of anchors</li>
-                        <li class="heading">Tracking &amp; Analysis</li>
-                        <li>Google Analytics Installation</li>
-                        <li>Google Webmaster Installation</li>
-                        <li>Call To Action Plan</li>
-                        <li>Creation of Sitemaps</li>
-                        <li class="heading">Reporting</li>
-                        <li>Monthly Reporting </li>
-                        <li>Recommendation </li>
-                        <li>Email Support</li>
-                        <li>Phone Support</li>
-                        <li class="heading">Off Page Optimization</li>
-                        <li>Social Bookmarking</li>
-                        <li>Slide Share Marketing </li>
-                        <li>Forums/FAQ’s</li>
-                        <li>Link Building</li>
-                        <li>Directory Submission</li>
-                        <li>Local Business Listings </li>
-
-
-
-
-
-                        </ul>
-
-                    </div>
-                    <div id="mCSB_6_scrollbar_vertical"
-                        class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
-                        style="display: block;">
-                        <div class="mCSB_draggerContainer">
-                            <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
-                                style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
-                                <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-                            </div>
-                            <div class="mCSB_draggerRail"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
- 
-
-            <div class="pack-btn">
-
-                <ul>
-
-                    <li><a href="web-requirementsc92d.html?pack=6"
-                            name="Start Up Website Package - $299"
-                            title="Start Up Website Pack For Only $299" class="order_now ">Start
-                            Project</a></li>
-
-                  
-
-                </ul>
-
-            </div>
-
-            <div class="pack-lbtn">
-
-                <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
-                    277541</a>
-
-                <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
-
-            </div>
-
-        </div>
+            
 
     </div>
     
     `;
 }
 
-function pricingecom()
-{
+function pricingecom() {
     mainBox2.innerHTML = "";
-    mainBox2.innerHTML= `
+    mainBox2.innerHTML = `
     <div class="col-lg-4 col-md-6 pack-item">
 
     <div class="pack-inn">
 
         <div class="pack-header">
 
-            <h3 class="pack-name">e-Commerce
+            <h3 class="pack-name">Beginners e-Commerce
 
                 Package
 
@@ -3100,6 +2730,136 @@ function pricingecom()
 
 
                     </ul>
+
+                </div>
+                <div id="mCSB_6_scrollbar_vertical"
+                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
+                    style="display: block;">
+                    <div class="mCSB_draggerContainer">
+                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
+                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                        </div>
+                        <div class="mCSB_draggerRail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="pack-btn">
+
+            <ul>
+
+                <li><a href="web-requirementsc92d.html?pack=6"
+                        name="Start Up Website Package - $299"
+                        title="Start Up Website Pack For Only $299" class="order_now ">Start
+                        Project</a></li>
+
+              
+
+            </ul>
+
+        </div>
+
+        <div class="pack-lbtn">
+
+            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
+                277541</a>
+
+            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-lg-4 col-md-6 pack-item">
+
+    <div class="pack-inn">
+
+        <div class="pack-header">
+
+            <h3 class="pack-name">Corporate e-Commerce
+
+                Package
+
+            </h3>
+
+          
+
+        </div>
+
+        <div class="pack-price">
+
+            <h4 class="pack-amt"><sup>$</sup>1,695
+            </h4>
+
+        </div>
+
+        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
+            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                tabindex="0" style="max-height: none;">
+                <div id="mCSB_6_container" class="mCSB_container"
+                    style="position:relative; top:0; left:0;" dir="ltr">
+
+                    <ul>
+
+                    <li>Unlimited Unique Pages Website</li>
+
+                    <li>Conceptual and Dynamic Website</li>
+
+                    <li>Content Management System (CMS)</li>
+
+                    <li>Mobile Responsive</li>
+
+                    <li>Easy Product Search</li>
+
+                    <li>Product Reviews</li>
+
+                    <li>Unlimited Products</li>
+
+                    <li>Unlimited Categories</li>
+
+                    <li>Full Shopping Cart Integration</li>
+
+                    <li>Payment Module Integration</li>
+
+                    <li>Sales &amp; Inventory Management</li>
+
+                    <li>Jquery Slider</li>
+
+                    <li>Free Google Friendly Sitemap</li>
+
+                    <!--<li>FREE 3 Years Hosting</li>-->
+
+                    <li>Custom Email Addresses</li>
+
+                    <li>Complete W3C Certified HTML</li>
+
+                    <li>Facebook Page Design</li>
+
+                    <li>Twitter Page Design</li>
+
+                    <li>YouTube Page Design</li>
+
+                    <li>Instagram Page Design</li>
+
+                    <li>Complete Deployment</li>
+
+                    <li>Dedicated Accounts Manager</li>
+
+                    <li>100% Ownership Rights</li>
+
+                    <li>100% Satisfaction Guarantee</li>
+
+                    <li>100% Unique Design Guarantee</li>
+
+                    <li>100% Money Back Guarantee</li>
+
+                </ul>
 
                 </div>
                 <div id="mCSB_6_scrollbar_vertical"
@@ -3151,7 +2911,7 @@ function pricingecom()
 
     <div class="pack-header">
 
-        <h3 class="pack-name">e-Commerce
+        <h3 class="pack-name">Elite e-Commerce
 
             Package
 
@@ -3163,7 +2923,7 @@ function pricingecom()
 
     <div class="pack-price">
 
-        <h4 class="pack-amt"><sup>$</sup>895
+        <h4 class="pack-amt"><sup>$</sup>2,595
         </h4>
 
     </div>
@@ -3176,32 +2936,83 @@ function pricingecom()
 
                 <ul>
 
+                          <li>UNLIMITED Logo Design Concepts</li>
 
+                          <li>By 6 Award Winning Designers</li>
 
+                          <li>Icon Design</li>
 
-                <li>Upto 15 Unique Pages Website</li>
-                <li>Conceptual and Dynamic Website</li>
-                <li>Content Management System (CMS)</li>
-                <li>Mobile Responsive</li>
-                <li>Easy Product Search</li>
-                <li>Product Reviews</li>
-                <li>Up To 100 Products</li>
-                <li>Up To 7 Categories</li>
-                <li>Full Shopping Cart Integration</li>
-                <li>Payment Module Integration</li>
-                <li>Sales &amp; Inventory Management</li>
-                <li>Jquery Slider</li>
-                <li>Free Google Friendly Sitemap</li>
-                <!--<li>FREE 1 Years Hosting</li>-->
-                <li>Custom Email Addresses</li>
+                          <li>UNLIMITED Revisions</li>
 
+                          <li>Print Media</li>
 
+                          <li>Stationary Design (BusinessCard,Letterhead &amp; Envelope)</li>
 
+                          <li>Invoice Design, Email Signature</li>
 
+                          <li>Bi-Fold Brochure (OR) 2 Sided Flyer Design</li>
 
+                          <li>Product Catalog Design</li>
 
+                          <li>Sign age Design (OR) Label Design</li>
 
-                </ul>
+                          <li>T-Shirt Design (OR) Car Wrap Design</li>
+
+                          <li>Website</li>
+
+                          <li>E-Commerce Store Design</li>
+
+                          <li>Product Detail Page Design</li>
+
+                          <li>Unique Banner Slider</li>
+
+                          <li>Featured Products Showcase</li>
+
+                          <li>Full Shopping Cart Integration</li>
+
+                          <li>Unlimited Products</li>
+
+                          <li>Unlimited Categories</li>
+
+                          <li>Product Rating &amp; Reviews</li>
+
+                          <li>Easy Product Search</li>
+
+                          <li>Payment Gateway Integration</li>
+
+                          <li>Multi-currency Support</li>
+
+                          <li>Content Management System</li>
+
+                          <li>Cutomer Log-in Area</li>
+
+                          <li>Mobile Responsive</li>
+
+                          <li>Social Media Plugins Integration</li>
+
+                          <li>Tell a Friend Feature</li>
+
+                          <li>Social Media Pages</li>
+
+                          <li>Facebook , Twitter, YouTube, Google+ &amp; Pinterest Page Designs</li>
+
+                          <li>Value Added Services</li>
+
+                          <li>Dedicated Account Manager</li>
+
+                          <li>Unlimited Revisions</li>
+
+                          <li>All Final File Formats</li>
+
+                          <li>100% Ownership Rights</li>
+
+                          <li>100% Satisfaction Guarantee</li>
+
+                          <li>100% Unique Design Guarantee</li>
+
+                          <li>100% Money Back Guarantee *</li>
+
+                        </ul>
 
             </div>
             <div id="mCSB_6_scrollbar_vertical"
@@ -3247,310 +3058,7 @@ function pricingecom()
 </div>
 
 </div>
-<div class="col-lg-4 col-md-6 pack-item">
 
-    <div class="pack-inn">
-
-        <div class="pack-header">
-
-            <h3 class="pack-name">e-Commerce
-
-                Package
-
-            </h3>
-
-          
-
-        </div>
-
-        <div class="pack-price">
-
-            <h4 class="pack-amt"><sup>$</sup>895
-            </h4>
-
-        </div>
-
-        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
-            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
-                tabindex="0" style="max-height: none;">
-                <div id="mCSB_6_container" class="mCSB_container"
-                    style="position:relative; top:0; left:0;" dir="ltr">
-
-                    <ul>
-
-
-
-
-                    <li>Upto 15 Unique Pages Website</li>
-                    <li>Conceptual and Dynamic Website</li>
-                    <li>Content Management System (CMS)</li>
-                    <li>Mobile Responsive</li>
-                    <li>Easy Product Search</li>
-                    <li>Product Reviews</li>
-                    <li>Up To 100 Products</li>
-                    <li>Up To 7 Categories</li>
-                    <li>Full Shopping Cart Integration</li>
-                    <li>Payment Module Integration</li>
-                    <li>Sales &amp; Inventory Management</li>
-                    <li>Jquery Slider</li>
-                    <li>Free Google Friendly Sitemap</li>
-                    <!--<li>FREE 1 Years Hosting</li>-->
-                    <li>Custom Email Addresses</li>
-
-
-
-
-
-
-
-                    </ul>
-
-                </div>
-                <div id="mCSB_6_scrollbar_vertical"
-                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
-                    style="display: block;">
-                    <div class="mCSB_draggerContainer">
-                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
-                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
-                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-                        </div>
-                        <div class="mCSB_draggerRail"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="pack-btn">
-
-            <ul>
-
-                <li><a href="web-requirementsc92d.html?pack=6"
-                        name="Start Up Website Package - $299"
-                        title="Start Up Website Pack For Only $299" class="order_now ">Start
-                        Project</a></li>
-
-              
-
-            </ul>
-
-        </div>
-
-        <div class="pack-lbtn">
-
-            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
-                277541</a>
-
-            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="col-lg-4 col-md-6 pack-item">
-
-<div class="pack-inn">
-
-    <div class="pack-header">
-
-        <h3 class="pack-name">e-Commerce
-
-            Package
-
-        </h3>
-
-      
-
-    </div>
-
-    <div class="pack-price">
-
-        <h4 class="pack-amt"><sup>$</sup>895
-        </h4>
-
-    </div>
-
-    <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
-        <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
-            tabindex="0" style="max-height: none;">
-            <div id="mCSB_6_container" class="mCSB_container"
-                style="position:relative; top:0; left:0;" dir="ltr">
-
-                <ul>
-
-
-
-
-                <li>Upto 15 Unique Pages Website</li>
-                <li>Conceptual and Dynamic Website</li>
-                <li>Content Management System (CMS)</li>
-                <li>Mobile Responsive</li>
-                <li>Easy Product Search</li>
-                <li>Product Reviews</li>
-                <li>Up To 100 Products</li>
-                <li>Up To 7 Categories</li>
-                <li>Full Shopping Cart Integration</li>
-                <li>Payment Module Integration</li>
-                <li>Sales &amp; Inventory Management</li>
-                <li>Jquery Slider</li>
-                <li>Free Google Friendly Sitemap</li>
-                <!--<li>FREE 1 Years Hosting</li>-->
-                <li>Custom Email Addresses</li>
-
-
-
-
-
-
-
-                </ul>
-
-            </div>
-            <div id="mCSB_6_scrollbar_vertical"
-                class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
-                style="display: block;">
-                <div class="mCSB_draggerContainer">
-                    <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
-                        style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
-                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-                    </div>
-                    <div class="mCSB_draggerRail"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="pack-btn">
-
-        <ul>
-
-            <li><a href="web-requirementsc92d.html?pack=6"
-                    name="Start Up Website Package - $299"
-                    title="Start Up Website Pack For Only $299" class="order_now ">Start
-                    Project</a></li>
-
-          
-
-        </ul>
-
-    </div>
-
-    <div class="pack-lbtn">
-
-        <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
-            277541</a>
-
-        <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
-
-    </div>
-
-</div>
-
-</div>
-<div class="col-lg-4 col-md-6 pack-item">
-
-    <div class="pack-inn">
-
-        <div class="pack-header">
-
-            <h3 class="pack-name">e-Commerce
-
-                Package
-
-            </h3>
-
-          
-
-        </div>
-
-        <div class="pack-price">
-
-            <h4 class="pack-amt"><sup>$</sup>895
-            </h4>
-
-        </div>
-
-        <div class="pack-list pack-ul mCustomScrollbar _mCS_6 mCS-autoHide">
-            <div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
-                tabindex="0" style="max-height: none;">
-                <div id="mCSB_6_container" class="mCSB_container"
-                    style="position:relative; top:0; left:0;" dir="ltr">
-
-                    <ul>
-
-
-
-
-                    <li>Upto 15 Unique Pages Website</li>
-                    <li>Conceptual and Dynamic Website</li>
-                    <li>Content Management System (CMS)</li>
-                    <li>Mobile Responsive</li>
-                    <li>Easy Product Search</li>
-                    <li>Product Reviews</li>
-                    <li>Up To 100 Products</li>
-                    <li>Up To 7 Categories</li>
-                    <li>Full Shopping Cart Integration</li>
-                    <li>Payment Module Integration</li>
-                    <li>Sales &amp; Inventory Management</li>
-                    <li>Jquery Slider</li>
-                    <li>Free Google Friendly Sitemap</li>
-                    <!--<li>FREE 1 Years Hosting</li>-->
-                    <li>Custom Email Addresses</li>
-
-
-
-
-
-
-
-                    </ul>
-
-                </div>
-                <div id="mCSB_6_scrollbar_vertical"
-                    class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical"
-                    style="display: block;">
-                    <div class="mCSB_draggerContainer">
-                        <div id="mCSB_6_dragger_vertical" class="mCSB_dragger"
-                            style="position: absolute; min-height: 30px; display: block; height: 67px; max-height: 160px; top: 0px;">
-                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-                        </div>
-                        <div class="mCSB_draggerRail"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="pack-btn">
-
-            <ul>
-
-                <li><a href="web-requirementsc92d.html?pack=6"
-                        name="Start Up Website Package - $299"
-                        title="Start Up Website Pack For Only $299" class="order_now ">Start
-                        Project</a></li>
-
-              
-
-            </ul>
-
-        </div>
-
-        <div class="pack-lbtn">
-
-            <a href="tel:+44 7360 277541" class="live_call"><span>Speak with us</span> +44 7360
-                277541</a>
-
-            <a href="javascript:;" class="chat"><span>Want to discuss?</span> Live Chat Now </a>
-
-        </div>
-
-    </div>
 
 </div>
     
@@ -3560,24 +3068,39 @@ function pricingecom()
 
 }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const buttons = document.querySelectorAll('.pricing-button');
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.pricing-button');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', (event) => {
-                // Remove the active class from all buttons
-                buttons.forEach(btn => btn.classList.remove('active'));
+    buttons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            // Remove the active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
 
-                // Add the active class to the clicked button
-                event.currentTarget.classList.add('active');
+            // Add the active class to the clicked button
+            event.currentTarget.classList.add('active');
 
-                // Call the corresponding function (if any)
-                const functionName = event.currentTarget.getAttribute('onclick').replace('(event)', '');
-                if (typeof window[functionName] === 'function') {
-                    window[functionName](event);
-                }
-            });
+            // Call the corresponding function (if any)
+            const functionName = event.currentTarget.getAttribute('onclick').replace('(event)', '');
+            if (typeof window[functionName] === 'function') {
+                window[functionName](event);
+            }
         });
     });
+});
 
-    
+
+  document.addEventListener("DOMContentLoaded", function() {
+    new Typed('#typed-element', {
+      strings: ['Companies Scale', 'Solution', 'Design'],
+      typeSpeed: 160,
+      backSpeed: 120,
+      backDelay: 1000,
+      startDelay: 800,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
+    });
+  });
+
+
+  AOS.init();
