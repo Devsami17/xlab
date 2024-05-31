@@ -25,6 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
 
@@ -44,6 +45,32 @@
         </div>
     </div>
     <!-- preloader start -->
+
+<!--Model start-->
+<!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="icon-box">
+            <i class="material-icons">&#xE876;</i>
+        </div>	
+        <h4 class="modal-title w-100">Congratulations !</h4>	
+        </div>
+        <div class="modal-body">
+            <p class="text-center">You have been successfully subscribed our newsletter. Stay tuned for updates</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-success btn-block" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Model end-->
+
 
     <!-- Backtotop start -->
     <div class="backtotop-wrap cursor-pointer">
@@ -346,11 +373,11 @@
                 <ul>
                     <li  onclick="showprojects('Website'); setActive(event);" class="active_project_li">Website
                         Development</li>
-                    <li onclick="showprojects('logo'); setActive(event);">Logo Design</li>
-                    <li onclick="showprojects('Ecommerce'); setActive(event);">Ecommerce Web Solution</li>
+                    <li onclick="showprojects('erp'); setActive(event);">ERPs</li>
+                    <li onclick="showprojects('custom'); setActive(event);">Custom</li>
                     <li onclick="showprojects('app'); setActive(event);">App Design</li>
-                    <li onclick="showprojects('Website'); setActive(event);">Stationary Design</li>
-                    <li onclick="showprojects('Illustration'); setActive(event);">Illustration Design</li>
+                    <li onclick="showprojects('Software'); setActive(event);">Software</li>
+                    <li onclick="showprojects('crm'); setActive(event);">CRMs</li>
                 </ul>
                 </ul>
             </div>
@@ -2014,7 +2041,7 @@
                         </div>
                         <div class="subscribe__form d-flex wow fadeIn animated" data-wow-delay=".3s">
                             <input type="text" placeholder="Enter Your Email">
-                            <button type="submit" class="rs-btn btn-white">Subscribe Now</button>
+                            <button type="button" class="rs-btn btn-white" data-bs-toggle="modal" data-bs-target="#exampleModal">Subscribe Now</button>
                         </div>
                     </div>
                 </div>
