@@ -666,12 +666,12 @@
 
 
 let projectsData = [
-    { category: 'Website', img: './assets/imgs/portfolio/project_1_web.png' },
-    { category: 'Website', img: './assets/imgs/portfolio/project_2_web.png' },
-    { category: 'Website', img: './assets/imgs/portfolio/project_3_web.png' },
-    { category: 'Website', img: './assets/imgs/portfolio/project_4_web.png' },
-    { category: 'Website', img: './assets/imgs/portfolio/project_5_web.png' },
-    { category: 'Website', img: './assets/imgs/portfolio/project_6_web.png' },
+    { category: 'Website', img: './assets/imgs/portfolio/project_1_web.png',a : "https://www.trekbikes.com/us/en_US/" },
+    { category: 'Website', img: './assets/imgs/portfolio/project_2_web.png',a:"https://live.templately.com/gamezone/" },
+    { category: 'Website', img: './assets/imgs/portfolio/project_3_web.png',a:"https://www.rollingloud.com/" },
+    { category: 'Website', img: './assets/imgs/portfolio/project_4_web.png',a:"https://www.rollingloud.com/" },
+    { category: 'Website', img: './assets/imgs/portfolio/project_5_web.png',a:"https://www.24petwatch.com/" },
+    { category: 'Website', img: './assets/imgs/portfolio/project_6_web.png',a:"https://www.duratongear.com/" },
     { category: 'Website', img: './assets/imgs/portfolio/project_7_web.png' },
     { category: 'Website', img: './assets/imgs/portfolio/project_8_web.png' },
     { category: 'Website', img: './assets/imgs/portfolio/project_9_web.png' },
@@ -720,7 +720,7 @@ function showprojects(searchitem) {
     mainBox.innerHTML = "";
     for (var i = 0; i < temparray.length; i++) {
         mainBox.innerHTML += `<div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 col-12">
-<a href="${temparray[i].img}"><img src="${temparray[i].img}" alt=""></a>
+<a href="${temparray[i].a}"><img src="${temparray[i].img}" alt=""></a>
 </div>`;
     }
 }

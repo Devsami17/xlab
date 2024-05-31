@@ -7995,29 +7995,29 @@ body .ui-tooltip {
 .footer__area-common {
   position: relative;
   z-index: 1;
-  padding-top: 120px;
+  padding-top: 160px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer__area-common {
-    padding-top: 120px;
+    padding-top: 160px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .footer__area-common {
-    padding-top: 120px;
+    padding-top: 160px;
   }
 }
 .footer__area-common-pt-163 {
-  padding-top: 120px;
+  padding-top: 160px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer__area-common-pt-163 {
-    padding-top: 120px;
+    padding-top: 160px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .footer__area-common-pt-163 {
-    padding-top: 120px;
+    padding-top: 160px;
   }
 }
 
@@ -8648,7 +8648,7 @@ top: 50px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 0;
+  padding: 10px 0;
   gap: 10px 30px;
 }
 .footer__bottom-wrapper {
