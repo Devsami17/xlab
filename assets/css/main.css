@@ -11882,6 +11882,11 @@ margin-top: 15px;
     max-width: 40px;
   }
 }
+@media only screen and (min-width:1920px){
+  .banner-1{
+    height:800px !important;
+  }
+}
 .latest-service__item-text a:hover h4 {
   color: var(--rs-theme-primary);
 }
@@ -11912,7 +11917,7 @@ border-right: 5px solid #fff;
   border-radius: 5px;
   -webkit-box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
-  border: 1px solid var(--rs-gray-800);
+  /* border: 1px solid var(--rs-gray-800); */
   border-top: 0;
 }
 /* .latest-blog__item:hover .latest-blog__item-media img {
