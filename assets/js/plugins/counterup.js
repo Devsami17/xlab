@@ -7,4 +7,117 @@
  * Amended by Jeremy Paris, Ciro Mattia Gonano and others
  *
  * Date: Feb 24, 2017
- */ !function(t){"use strict";t.fn.counterUp=function(e){var n,a=t.extend({time:400,delay:10,offset:100,beginAt:0,formatter:!1,context:"window",callback:function(){}},e);return this.each(function(){var e=t(this),u={time:t(this).data("counterup-time")||a.time,delay:t(this).data("counterup-delay")||a.delay,offset:t(this).data("counterup-offset")||a.offset,beginAt:t(this).data("counterup-beginat")||a.beginAt,context:t(this).data("counterup-context")||a.context},i=function(){var i=[],o=u.time/u.delay,c=t(this).attr("data-num")?t(this).attr("data-num"):e.text(),r=/[0-9]+,[0-9]+/.test(c),f=((c=c.replace(/,/g,"")).split(".")[1]||[]).length;u.beginAt>c&&(u.beginAt=c);var s=/[0-9]+:[0-9]+:[0-9]+/.test(c);if(s){var d=c.split(":"),l=1;for(n=0;d.length>0;)n+=l*parseInt(d.pop(),10),l*=60}for(var $=o;$>=u.beginAt/c*o;$--){var p=parseFloat(c/o*$).toFixed(f);if(s){p=parseInt(n/o*$);var h=parseInt(p/3600)%24,m=parseInt(p/60)%60,g=parseInt(p%60,10);p=(h<10?"0"+h:h)+":"+(m<10?"0"+m:m)+":"+(g<10?"0"+g:g)}if(r)for(;/(\d+)(\d{3})/.test(p.toString());)p=p.toString().replace(/(\d+)(\d{3})/,"$1,$2");a.formatter&&(p=a.formatter.call(this,p)),i.unshift(p)}e.data("counterup-nums",i),e.text(u.beginAt);var b=function(){if(!e.data("counterup-nums")){a.callback.call(this);return}e.html(e.data("counterup-nums").shift()),e.data("counterup-nums").length?setTimeout(e.data("counterup-func"),u.delay):(e.data("counterup-nums",null),e.data("counterup-func",null),a.callback.call(this))};e.data("counterup-func",b),setTimeout(e.data("counterup-func"),u.delay)};e.waypoint(function(t){i(),this.destroy()},{offset:u.offset+"%",context:u.context})})}}(jQuery);
+ */
+(function ($) {
+    "use strict";
+
+    $.fn.counterUp = function (options) {
+
+        // Defaults
+        var settings = $.extend({
+                'time': 400,
+                'delay': 10,
+                'offset': 100,
+                'beginAt': 0,
+                'formatter': false,
+                'context': 'window',
+                callback: function () {
+                }
+            }, options),
+            s;
+
+        return this.each(function () {
+
+            // Store the object
+            var $this = $(this),
+                counter = {
+                    time: $(this).data('counterup-time') || settings.time,
+                    delay: $(this).data('counterup-delay') || settings.delay,
+                    offset: $(this).data('counterup-offset') || settings.offset,
+                    beginAt: $(this).data('counterup-beginat') || settings.beginAt,
+                    context: $(this).data('counterup-context') || settings.context
+                };
+
+            var counterUpper = function () {
+                var nums = [];
+                var diheaders = counter.time / counter.delay;
+                var num = $(this).attr('data-num') ? $(this).attr('data-num') : $this.text();
+                var isComma = /[0-9]+,[0-9]+/.test(num);
+                num = num.replace(/,/g, '');
+                var decimalPlaces = (num.split('.')[1] || []).length;
+                if (counter.beginAt > num)
+                    counter.beginAt = num;
+
+                var isTime = /[0-9]+:[0-9]+:[0-9]+/.test(num);
+
+                // Convert time to total seconds
+                if (isTime) {
+                    var times = num.split(':'),
+                        m = 1;
+                    s = 0;
+                    while (times.length > 0) {
+                        s += m * parseInt(times.pop(), 10);
+                        m *= 60;
+                    }
+                }
+
+                // Generate list of incremental numbers to display
+                for (var i = diheaders; i >= counter.beginAt / num * diheaders; i--) {
+
+                    var newNum = parseFloat(num / diheaders * i).toFixed(decimalPlaces);
+
+                    // Add incremental seconds and convert back to time
+                    if (isTime) {
+                        newNum = parseInt(s / diheaders * i);
+                        var hours = parseInt(newNum / 3600) % 24;
+                        var minutes = parseInt(newNum / 60) % 60;
+                        var seconds = parseInt(newNum % 60, 10);
+                        newNum = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+                    }
+
+                    // Preserve commas if input had commas
+                    if (isComma) {
+                        while (/(\d+)(\d{3})/.test(newNum.toString())) {
+                            newNum = newNum.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+                        }
+                    }
+                    if (settings.formatter) {
+                        newNum = settings.formatter.call(this, newNum);
+                    }
+                    nums.unshift(newNum);
+                }
+
+                $this.data('counterup-nums', nums);
+                $this.text(counter.beginAt);
+
+                // Updates the number until we're done
+                var f = function () {
+                    if (!$this.data('counterup-nums')) {
+                        settings.callback.call(this);
+                        return;
+                    }
+                    $this.html($this.data('counterup-nums').shift());
+                    if ($this.data('counterup-nums').length) {
+                        setTimeout($this.data('counterup-func'), counter.delay);
+                    } else {
+                        $this.data('counterup-nums', null);
+                        $this.data('counterup-func', null);
+                        settings.callback.call(this);
+                    }
+                };
+                $this.data('counterup-func', f);
+
+                // Start the count up
+                setTimeout($this.data('counterup-func'), counter.delay);
+            };
+
+            // Perform counts when the element gets into view
+            $this.waypoint(function (direction) {
+                counterUpper();
+                this.destroy(); //-- Waypoint 3.0 version of triggerOnce
+            }, {offset: counter.offset + "%", context: counter.context});
+        });
+
+    };
+
+})(jQuery);

@@ -1,1 +1,180 @@
-$(function(){ParallaxScroll.init()});var ParallaxScroll={showLogs:!1,round:1e3,init:function(){if(this._log("init"),this._inited){this._log("Already Inited"),this._inited=!0;return}this._requestAnimationFrame=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(a,t){window.setTimeout(a,1e3/60)},this._onScroll(!0)},_inited:!1,_properties:["x","y","z","rotateX","rotateY","rotateZ","scaleX","scaleY","scaleZ","scale"],_requestAnimationFrame:null,_log:function(a){this.showLogs&&console.log("Parallax Scroll / "+a)},_onScroll:function(a){var t=$(document).scrollTop(),e=$(window).height();this._log("onScroll "+t),$("[data-parallax]").each($.proxy(function(i,s){var r,o=$(s),l=[],n=!1,c=o.data("style");void 0==c&&(c=o.attr("style")||"",o.data("style",c));var d=[o.data("parallax")];for(r=2;;r++)if(o.data("parallax"+r))d.push(o.data("parallax-"+r));else break;var v=d.length;for(r=0;r<v;r++){var m=d[r],u=m["from-scroll"];void 0==u&&(u=Math.max(0,$(s).offset().top-e)),u|=0;var p=m.distance,h=m["to-scroll"];void 0==p&&void 0==h&&(p=e),p=Math.max(0|p,1);var x=m.easing,g=m["easing-return"];if(void 0!=x&&$.easing&&$.easing[x]||(x=null),void 0!=g&&$.easing&&$.easing[g]||(g=x),x){var f=m.duration;void 0==f&&(f=p),f=Math.max(0|f,1);var y=m["duration-return"];void 0==y&&(y=f),p=1;var _=o.data("current-time");void 0==_&&(_=0)}void 0==h&&(h=u+p),h|=0;var A=m.smoothness;void 0==A&&(A=30),A|=0,(a||0==A)&&(A=1),A|=0;var X=t;X=Math.min(X=Math.max(X,u),h),x&&(void 0==o.data("sens")&&o.data("sens","back"),X>u&&("back"==o.data("sens")?(_=1,o.data("sens","go")):_++),X<h&&("go"==o.data("sens")?(_=1,o.data("sens","back")):_++),a&&(_=f),o.data("current-time",_)),this._properties.map($.proxy(function(a){var t=0,e=m[a];if(void 0!=e){"scale"==a||"scaleX"==a||"scaleY"==a||"scaleZ"==a?t=1:e|=0;var i=o.data("_"+a);void 0==i&&(i=t);var s=(e-t)*((X-u)/(h-u))+t,r=i+(s-i)/A;if(x&&_>0&&_<=f){var c=t;"back"==o.data("sens")&&(c=e,e=-e,x=g,f=y),r=$.easing[x](null,_,c,e,f)}(r=Math.ceil(r*this.round)/this.round)==i&&s==e&&(r=e),l[a]||(l[a]=0),l[a]+=r,i!=l[a]&&(o.data("_"+a,l[a]),n=!0)}},this))}if(n){if(void 0!=l.z){var Y=m.perspective;void 0==Y&&(Y=800);var Z=o.parent();Z.data("style")||Z.data("style",Z.attr("style")||""),Z.attr("style","perspective:"+Y+"px; -webkit-perspective:"+Y+"px; "+Z.data("style"))}void 0==l.scaleX&&(l.scaleX=1),void 0==l.scaleY&&(l.scaleY=1),void 0==l.scaleZ&&(l.scaleZ=1),void 0!=l.scale&&(l.scaleX*=l.scale,l.scaleY*=l.scale,l.scaleZ*=l.scale);var q,F="translate3d("+(l.x?l.x:0)+"px, "+(l.y?l.y:0)+"px, "+(l.z?l.z:0)+"px)",b=F+" "+("rotateX("+(l.rotateX?l.rotateX:0)+"deg) rotateY("+(l.rotateY?l.rotateY:0)+"deg) rotateZ("+(l.rotateZ?l.rotateZ:0)+"deg)")+" "+("scaleX("+l.scaleX+") scaleY("+l.scaleY+") scaleZ("+l.scaleZ)+");";this._log(b),o.attr("style","transform:"+b+" -webkit-transform:"+b+" "+c)}},this)),window.requestAnimationFrame?window.requestAnimationFrame($.proxy(this._onScroll,this,!1)):this._requestAnimationFrame($.proxy(this._onScroll,this,!1))}};
+$(function() {
+    ParallaxScroll.init();
+});
+
+var ParallaxScroll = {
+    /* PUBLIC VARIABLES */
+    showLogs: false,
+    round: 1000,
+
+    /* PUBLIC FUNCTIONS */
+    init: function() {
+        this._log("init");
+        if (this._inited) {
+            this._log("Already Inited");
+            this._inited = true;
+            return;
+        }
+        this._requestAnimationFrame = (function() {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function( /* function */ callback, /* DOMElement */ element) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+        this._onScroll(true);
+    },
+
+    /* PRIVATE VARIABLES */
+    _inited: false,
+    _properties: ['x', 'y', 'z', 'rotateX', 'rotateY', 'rotateZ', 'scaleX', 'scaleY', 'scaleZ', 'scale'],
+    _requestAnimationFrame: null,
+
+    /* PRIVATE FUNCTIONS */
+    _log: function(message) {
+        if (this.showLogs) console.log("Parallax Scroll / " + message);
+    },
+    _onScroll: function(noSmooth) {
+        var scroll = $(document).scrollTop();
+        var windowHeight = $(window).height();
+        this._log("onScroll " + scroll);
+        $("[data-parallax]").each($.proxy(function(index, el) {
+            var $el = $(el);
+            var properties = [];
+            var applyProperties = false;
+            var style = $el.data("style");
+            if (style == undefined) {
+                style = $el.attr("style") || "";
+                $el.data("style", style);
+            }
+            var datas = [$el.data("parallax")];
+            var iData;
+            for (iData = 2;; iData++) {
+                if ($el.data("parallax" + iData)) {
+                    datas.push($el.data("parallax-" + iData));
+                } else {
+                    break;
+                }
+            }
+            var datasLength = datas.length;
+            for (iData = 0; iData < datasLength; iData++) {
+                var data = datas[iData];
+                var scrollFrom = data["from-scroll"];
+                if (scrollFrom == undefined) scrollFrom = Math.max(0, $(el).offset().top - windowHeight);
+                scrollFrom = scrollFrom | 0;
+                var scrollDistance = data["distance"];
+                var scrollTo = data["to-scroll"];
+                if (scrollDistance == undefined && scrollTo == undefined) scrollDistance = windowHeight;
+                scrollDistance = Math.max(scrollDistance | 0, 1);
+                var easing = data["easing"];
+                var easingReturn = data["easing-return"];
+                if (easing == undefined || !$.easing || !$.easing[easing]) easing = null;
+                if (easingReturn == undefined || !$.easing || !$.easing[easingReturn]) easingReturn = easing;
+                if (easing) {
+                    var totalTime = data["duration"];
+                    if (totalTime == undefined) totalTime = scrollDistance;
+                    totalTime = Math.max(totalTime | 0, 1);
+                    var totalTimeReturn = data["duration-return"];
+                    if (totalTimeReturn == undefined) totalTimeReturn = totalTime;
+                    scrollDistance = 1;
+                    var currentTime = $el.data("current-time");
+                    if (currentTime == undefined) currentTime = 0;
+                }
+                if (scrollTo == undefined) scrollTo = scrollFrom + scrollDistance;
+                scrollTo = scrollTo | 0;
+                var smoothness = data["smoothness"];
+                if (smoothness == undefined) smoothness = 30;
+                smoothness = smoothness | 0;
+                if (noSmooth || smoothness == 0) smoothness = 1;
+                smoothness = smoothness | 0;
+                var scrollCurrent = scroll;
+                scrollCurrent = Math.max(scrollCurrent, scrollFrom);
+                scrollCurrent = Math.min(scrollCurrent, scrollTo);
+                if (easing) {
+                    if ($el.data("sens") == undefined) $el.data("sens", "back");
+                    if (scrollCurrent > scrollFrom) {
+                        if ($el.data("sens") == "back") {
+                            currentTime = 1;
+                            $el.data("sens", "go");
+                        } else {
+                            currentTime++;
+                        }
+                    }
+                    if (scrollCurrent < scrollTo) {
+                        if ($el.data("sens") == "go") {
+                            currentTime = 1;
+                            $el.data("sens", "back");
+                        } else {
+                            currentTime++;
+                        }
+                    }
+                    if (noSmooth) currentTime = totalTime;
+                    $el.data("current-time", currentTime);
+                }
+                this._properties.map($.proxy(function(prop) {
+                    var defaultProp = 0;
+                    var to = data[prop];
+                    if (to == undefined) return;
+                    if (prop == "scale" || prop == "scaleX" || prop == "scaleY" || prop == "scaleZ") {
+                        defaultProp = 1;
+                    } else {
+                        to = to | 0;
+                    }
+                    var prev = $el.data("_" + prop);
+                    if (prev == undefined) prev = defaultProp;
+                    var next = ((to - defaultProp) * ((scrollCurrent - scrollFrom) / (scrollTo - scrollFrom))) + defaultProp;
+                    var val = prev + (next - prev) / smoothness;
+                    if (easing && currentTime > 0 && currentTime <= totalTime) {
+                        var from = defaultProp;
+                        if ($el.data("sens") == "back") {
+                            from = to;
+                            to = -to;
+                            easing = easingReturn;
+                            totalTime = totalTimeReturn;
+                        }
+                        val = $.easing[easing](null, currentTime, from, to, totalTime);
+                    }
+                    val = Math.ceil(val * this.round) / this.round;
+                    if (val == prev && next == to) val = to;
+                    if (!properties[prop]) properties[prop] = 0;
+                    properties[prop] += val;
+                    if (prev != properties[prop]) {
+                        $el.data("_" + prop, properties[prop]);
+                        applyProperties = true;
+                    }
+                }, this));
+            }
+            if (applyProperties) {
+                if (properties["z"] != undefined) {
+                    var perspective = data["perspective"];
+                    if (perspective == undefined) perspective = 800;
+                    var $parent = $el.parent();
+                    if (!$parent.data("style")) $parent.data("style", $parent.attr("style") || "");
+                    $parent.attr("style", "perspective:" + perspective + "px; -webkit-perspective:" + perspective + "px; " + $parent.data("style"));
+                }
+                if (properties["scaleX"] == undefined) properties["scaleX"] = 1;
+                if (properties["scaleY"] == undefined) properties["scaleY"] = 1;
+                if (properties["scaleZ"] == undefined) properties["scaleZ"] = 1;
+                if (properties["scale"] != undefined) {
+                    properties["scaleX"] *= properties["scale"];
+                    properties["scaleY"] *= properties["scale"];
+                    properties["scaleZ"] *= properties["scale"];
+                }
+                var translate3d = "translate3d(" + (properties["x"] ? properties["x"] : 0) + "px, " + (properties["y"] ? properties["y"] : 0) + "px, " + (properties["z"] ? properties["z"] : 0) + "px)";
+                var rotate3d = "rotateX(" + (properties["rotateX"] ? properties["rotateX"] : 0) + "deg) rotateY(" + (properties["rotateY"] ? properties["rotateY"] : 0) + "deg) rotateZ(" + (properties["rotateZ"] ? properties["rotateZ"] : 0) + "deg)";
+                var scale3d = "scaleX(" + properties["scaleX"] + ") scaleY(" + properties["scaleY"] + ") scaleZ(" + properties["scaleZ"] + ")";
+                var cssTransform = translate3d + " " + rotate3d + " " + scale3d + ";";
+                this._log(cssTransform);
+                $el.attr("style", "transform:" + cssTransform + " -webkit-transform:" + cssTransform + " " + style);
+            }
+        }, this));
+        if (window.requestAnimationFrame) {
+            window.requestAnimationFrame($.proxy(this._onScroll, this, false));
+        } else {
+            this._requestAnimationFrame($.proxy(this._onScroll, this, false));
+        }
+    }
+};
