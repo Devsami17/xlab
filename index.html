@@ -19,6 +19,7 @@
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
     <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css">
@@ -79,9 +80,7 @@
 
     <!-- Backtotop start -->
     <div class="backtotop-wrap cursor-pointer">
-        <svg class="backtotop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
+        <svg class="backtotop-circle svg-content" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"/></svg>
     </div>
     <!-- Backtotop end -->
 
@@ -191,8 +190,8 @@
                                                 <a href="blog.html">Blog</a>
 
                                             </li>
-                                            <li class="has-dropdown ">
-                                                <a href="javascript:void(0)">Company</a>
+                                            <li class=" ">
+                                                <a href="javascript:void(0)">Company<svg style="color: #000; " xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></a>
                                                 <ul class="submenu">
                                                     <li><a href="pricing.html">Pricing</a></li>
                                                     <li><a href="team.html">Team</a></li>
@@ -212,7 +211,7 @@
                             <div class="header__action d-flex align-items-center">
                                 <div class="header__btn-wrap d-none d-sm-inline-flex">
                                     <div class="social-media">
-                                       <button class="hire-end_2_3" onclick="location.replace('hireus.html')">Hire Us !</button>
+                                       <button class="hire-end_2_3" onclick="location.replace('hireus.html')">Hire Us .</button>
                                     
                                     </div>
                                 </div>
@@ -252,7 +251,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="519" height="519" viewBox="0 0 519 519"
                             fill="none">
                             <path d="M518.873 259.436L259.438 0L0.00179011 259.436L259.438 518.871L518.873 259.436Z"
-                                fill="orangered" />
+                                fill="#FF6138" />
                         </svg>
                     </div>
 
@@ -260,7 +259,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="1854" height="1854" viewBox="0 0 1854 1854"
                             fill="none">
                             <path d="M1853.98 926.992L926.992 0L0.00043509 926.992L926.992 1853.98L1853.98 926.992Z"
-                                fill="orangered" />
+                                fill="#FF6138" />
                         </svg>
                     </div>
 
@@ -291,7 +290,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="594" height="594" viewBox="0 0 594 594"
                             fill="none">
                             <path d="M593.236 296.619L296.617 0L-0.0015627 296.619L296.617 593.238L593.236 296.619Z"
-                                fill="orangered" />
+                                fill="#FF6138" />
                         </svg>
                     </div>
 
@@ -312,10 +311,11 @@
                                 <p class="mb-0">We focus on strategic planning and utilizing technology to satisfy
                                     business needs to create efficient processes.</p>
                             </div>
-                            <a href="hireus.html" class="new_butn btn-hover-white wow fadeIn animated"
+                            <div class="align-items-baseline align-items-lg-unset align-items-sm-unset align-items-md-unset align-items-xl-unset   d-flex flex-column flex-md-row flex-sm-row flex-lg-row flex-xl-row d-sm-block d-lg-block d-md-block d-xl-block">            <a href="hireus.html" class="new_butn btn-hover-white wow fadeIn animated"
                                 data-wow-delay=".5s">Hire Us</a>
                                 <a href="products.html" class="new_butn btn-hover-white wow fadeIn animated ms-3"
-                                data-wow-delay=".5s">Our Products</a>
+                                data-wow-delay=".5s">Our Products</a></div>
+                
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5 col-md-4 col-sm-3">
@@ -397,19 +397,15 @@
             </div>
             <div class="latest-portfolio_section_inner container">
                 <ul>
-                    <li  onclick="showprojects('Website'); setActive(event);" class="active_project_li">Website
-                        Development</li>
-                    <li onclick="showprojects('erp'); setActive(event);">ERPs</li>
-                    <li onclick="showprojects('custom'); setActive(event);">Custom</li>
-                    <li onclick="showprojects('app'); setActive(event);">App Design</li>
-                    <li onclick="showprojects('Software'); setActive(event);">Software</li>
-                    <li onclick="showprojects('crm'); setActive(event);">CRMs</li>
-                </ul>
+                    <li onclick="showprojectsNoPagination('Website'); setActive(event);" class="active_project_li">Website Development</li>
+                    <li onclick="showprojectsNoPagination('erp'); setActive(event);">ERPs</li>
+                    <li onclick="showprojectsNoPagination('custom'); setActive(event);">Custom</li>
+                    <li onclick="showprojectsNoPagination('app'); setActive(event);">App Design</li>
+                    <li onclick="showprojectsNoPagination('Software'); setActive(event);">Software</li>
+                    <li onclick="showprojectsNoPagination('crm'); setActive(event);">CRMs</li>
                 </ul>
             </div>
-            <div class="latest-portfolio_section_projects container" id="projects_images">
-
-            </div>
+            <div class="latest-portfolio_section_projects container" id="projects_images"></div>
 
 
 
@@ -525,7 +521,7 @@
                                 <a href="web-development.html" class="mb-2 mb-sm-15 mb-xs-10 d-block">
                                     <h4>Web Development</h4>
                                 </a>
-                                <a href="web-development.html">Read More &nbsp; <span class="fa-solid fa-arrow-right"></span></a>
+                                <a href="web-development.html">Read More <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ff6138"><path d="M630-444H192v-72h438L429-717l51-51 288 288-288 288-51-51 201-201Z"/></svg></a>
                             </div>
                         </div>
                         <div class="latest-service__item d-flex align-items-center mb-30  wow fadeIn animated"
@@ -538,7 +534,7 @@
                                 <a href="product-design.html" class="mb-2 mb-sm-15 mb-xs-10 d-block">
                                     <h4>Product Design</h4>
                                 </a>
-                                <a href="product-design.html">Read More &nbsp; <span class="fa-solid fa-arrow-right"></span></a>
+                                <a href="product-design.html">Read More <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ff6138"><path d="M630-444H192v-72h438L429-717l51-51 288 288-288 288-51-51 201-201Z"/></svg></a>
                             </div>
                         </div>
                         <div class="latest-service__item d-flex align-items-center mb-30  wow fadeIn animated"
@@ -551,7 +547,7 @@
                                 <a href="cloud-migration.html" class="mb-2 mb-sm-15 mb-xs-10 d-block">
                                     <h4>Cloud Migration</h4>
                                 </a>
-                                <a href="cloud-migration.html">Read More&nbsp; <span class="fa-solid fa-arrow-right"></span></a>
+                                <a href="cloud-migration.html">Read More <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ff6138"><path d="M630-444H192v-72h438L429-717l51-51 288 288-288 288-51-51 201-201Z"/></svg></a>
                             </div>
                         </div>
                     </div>
@@ -566,7 +562,7 @@
                                 <a href="Poc.html" class="mb-2 mb-sm-15 mb-xs-10 d-block">
                                     <h4>PoC Development</h4>
                                 </a>
-                                <a href="Poc.html">Read More &nbsp; <span class="fa-solid fa-arrow-right"></span></a>
+                                <a href="Poc.html">Read More <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ff6138"><path d="M630-444H192v-72h438L429-717l51-51 288 288-288 288-51-51 201-201Z"/></svg></a>
                             </div>
                         </div>
                         <div class="latest-service__item d-flex align-items-center mb-30  wow fadeIn animated"
@@ -579,7 +575,7 @@
                                 <a href="app-development.html" class="mb-2 mb-sm-15 mb-xs-10 d-block">
                                     <h4>App Development</h4>
                                 </a>
-                                <a href="app-development.html">Read More &nbsp; <span class="fa-solid fa-arrow-right"></span></a>
+                                <a href="app-development.html">Read More  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ff6138"><path d="M630-444H192v-72h438L429-717l51-51 288 288-288 288-51-51 201-201Z"/></svg></a>
                             </div>
                         </div>
                         <div class="latest-service__item d-flex align-items-center mb-30  wow fadeIn animated"
@@ -592,7 +588,7 @@
                                 <a href="web-design.html" class="mb-2 mb-sm-15 mb-xs-10 d-block">
                                     <h4>Web Design</h4>
                                 </a>
-                                <a href="web-design.html">Read More&nbsp; <span class="fa-solid fa-arrow-right"></span></a>
+                                <a href="web-design.html">Read More <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ff6138"><path d="M630-444H192v-72h438L429-717l51-51 288 288-288 288-51-51 201-201Z"/></svg></a>
                             </div>
                         </div>
                     </div>
@@ -1245,6 +1241,11 @@
                                     <li><a href="info@voags.com">info@voags.com</a></li>
                                     <li><a href="+92 300 1188320">+92 300 1188320</a></li>
                                 </ul>
+                            </div>
+                            <div class="footer__social mt-30">
+                                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
