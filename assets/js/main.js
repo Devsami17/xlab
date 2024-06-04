@@ -1123,4 +1123,8 @@ function opentab(e) {
     if (descriptionToShow) {
         descriptionToShow.style.display = 'block';
     }
+
+
+
+    
 }

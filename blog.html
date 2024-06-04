@@ -576,7 +576,40 @@
         </section>
     </footer>
     <!-- Footer area end -->
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const initialItems = 6; // Initial items to show
+            const additionalItems = 3; // Additional items to load
+            let currentPage = 1;
+    
+            const blogItems = document.querySelectorAll('.blog__item');
+            const loadMoreBtn = document.getElementById('load-more-btn');
+    
+            // Function to show items
+            function showItems() {
+                const totalItemsToShow = initialItems + (currentPage - 1) * additionalItems;
+    
+                for (let i = 0; i < totalItemsToShow && i < blogItems.length; i++) {
+                    blogItems[i].classList.add('show');
+                }
+    
+                // Hide the load more button if no more items to show
+                if (totalItemsToShow >= blogItems.length) {
+                    loadMoreBtn.style.display = 'none';
+                }
+            }
+    
+            // Initial load
+            showItems();
+    
+            // Load more button click event
+            loadMoreBtn.addEventListener('click', function() {
+                currentPage++;
+                showItems();
+            });
+        });
+    </script>
+    
 <!-- JS here -->
 <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
 <script src="assets/js/plugins/waypoints.min.js"></script>
