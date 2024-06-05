@@ -397,18 +397,30 @@
         })
     })
 });
-let projectsData = [{
+let projectsData = [
+    {
+        category: "Website",
+        img: "./assets/imgs/portfolio/project_19_web.png",
+        a: "https://tsdco.org/"
+    },
+    {
+        category: "Website",
+        img: "./assets/imgs/portfolio/project_20_web.png",
+        a: "https://macs-gc.com/"
+    },
+    {
+        category: "Website",
+        img: "./assets/imgs/portfolio/project_18_web.png",
+        a: "https://zarvanhost.com/en"
+    },
+    {
+        category: "Website",
+        img: "./assets/imgs/portfolio/project_17_web.png",
+        a: "https://paintcolumbia.com/"
+    },{
     category: "Website",
-    img: "./assets/imgs/portfolio/project_1_web.png",
-    a: "https://www.trekbikes.com/us/en_US/"
-}, {
-    category: "Website",
-    img: "./assets/imgs/portfolio/project_2_web.png",
-    a: "https://live.templately.com/gamezone/"
-}, {
-    category: "Website",
-    img: "./assets/imgs/portfolio/project_3_web.png",
-    a: "https://www.rollingloud.com/"
+    img: "./assets/imgs/portfolio/project_10_web.png",
+    a: "https://nubestmart.com/"
 }, {
     category: "Website",
     img: "./assets/imgs/portfolio/project_4_web.png",
@@ -435,32 +447,58 @@ let projectsData = [{
     a: "https://www.luxuryproperty.com/"
 }, {
     category: "Website",
-    img: "./assets/imgs/portfolio/software_4.png",
-    a: "https://www.negotyum.com/"
+    img: "./assets/imgs/portfolio/project_12_web.png",
+    a: "https://khafipetroleum.af/en/"
 }, {
     category: "Website",
-    img: "./assets/imgs/portfolio/software_5.png",
+    img: "./assets/imgs/portfolio/project_13_web.png",
+    a: "https://zarvanservices.com/en"
+}, {
+    category: "Website",
+    img: "./assets/imgs/portfolio/project_11_web.png",
+    a: "https://www.hwc.af/product?lang=en"
+}, {
+    category: "Website",
+    img: "./assets/imgs/portfolio/project_14_web.png",
+    a: "https://rdstudio.archishots.dev/"
+}, {
+    category: "Website",
+    img: "./assets/imgs/portfolio/project_15_web.png",
+    a: "https://sp-arc.net/sameep-padora-and-associates-works/#shop"
+}, , {
+    category: "Website",
+    img: "./assets/imgs/portfolio/project_16_web.png",
+    a: "https://test2.gowharshadmedia.com/"
+}, {
+    category: "Website",
+    img: "./assets/imgs/portfolio/crp_2.png",
     a: "https://rabonia.com/"
 }, {
     category: "Website",
     img: "./assets/imgs/portfolio/crp_1.png",
-    a: "https://sevdesk.com/"
-}, {
-    category: "Website",
-    img: "./assets/imgs/portfolio/crp_2.png",
-    a: "https://sellerboard.com/"
-}, {
+    a: "https://katchinternational.com/"
+},
+{
     category: "Website",
     img: "./assets/imgs/portfolio/crp_3.png",
-    a: "https://tacticalmanagement.ae//"
+    a: "https://katchinternational.com/"
+},
+{
+    category: "Website",
+    img: "./assets/imgs/portfolio/project_1_custom.png",
+    a: "https://www.sittercity.com/"
+}, {
+    category: "Website",
+    img: "./assets/imgs/portfolio/project_2_custom.png",
+    a: "https://www.myhome.ie/"
+}, {
+    category: "Website",
+    img: "./assets/imgs/portfolio/project_3_custom.png",
+    a: "https://allestate.ie/"
 }, {
     category: "Website",
     img: "./assets/imgs/portfolio/software_3.png",
     a: "https://taxqube.co.uk/"
-}, , {
-    category: "Website",
-    img: "./assets/imgs/portfolio/software_4.png",
-    a: "https://www.negotyum.com/"
 }, {
     category: "Website",
     img: "./assets/imgs/portfolio/software_5.png",
@@ -469,7 +507,16 @@ let projectsData = [{
     category: "Website",
     img: "./assets/imgs/portfolio/software_1.png",
     a: "https://katchinternational.com/"
+},
+{
+    category: "Website",
+    img: "./assets/imgs/portfolio/project_1_web.png",
+    a: "https://www.trekbikes.com/us/en_US/"
 }, {
+    category: "Website",
+    img: "./assets/imgs/portfolio/project_2_web.png",
+    a: "https://live.templately.com/gamezone/"
+},  {
     category: "app",
     img: "./assets/imgs/portfolio/project_1_app.png"
 }, {
@@ -623,8 +670,8 @@ var mainBox2 = document.getElementById("projects_images_1");
 function showprojects(e, t) {
     let i = projectsData.filter(t => t.category === e);
     mainBox2.innerHTML = "";
-    let a = (t - 1) * 15,
-        o = i.slice(a, a + 15);
+    let a = (t - 1) * itemsPerPage2,
+        o = i.slice(a, a + itemsPerPage2);
     for (let s = 0; s < o.length; s++) mainBox2.innerHTML += `<div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 col-12">
             <a href="${o[s].a||"#"}" target="_blank"><img src="${o[s].img}" alt=""></a>
         </div>`;
@@ -638,14 +685,26 @@ function setActive(e) {
 function updatePaginationLinks(e, t, i) {
     let a = document.getElementById("pagination_links");
     a.innerHTML = "";
-    let o = Math.ceil(i / 9);
+    let o = Math.ceil(i / itemsPerPage2);
     for (let s = 1; s <= o; s++) {
         let n = document.createElement("a");
         n.href = "#", n.innerText = s < 10 ? `0${s}` : s, n.dataset.page = s, n.onclick = function(t) {
             t.preventDefault(), showprojects(e, s)
         }, s === t && n.classList.add("active"), a.appendChild(n)
     }
+    let nextPageStartIndex = t * itemsPerPage2;
+    if (i > nextPageStartIndex + itemsPerPage2) {
+        let nextPageButton = document.createElement("a");
+        nextPageButton.href = "#";
+        nextPageButton.innerText = "Next Page";
+        nextPageButton.onclick = function(event) {
+            event.preventDefault();
+            showprojects(e, t + 1);
+        };
+        a.appendChild(nextPageButton);
+    }
 }
+
 window.onload = function() {
     showprojects("Website", 1);
     let e = document.querySelector(".latest-portfolio_section_inner ul li");
@@ -1128,3 +1187,81 @@ function opentab(e) {
 
     
 }
+document.addEventListener("DOMContentLoaded", function() {
+    var typedElement = document.getElementById('typed-element');
+
+    new Typed(typedElement, {
+      strings: ['Companies Scale', 'Design', 'Solution'],
+      typeSpeed: 150,
+      backSpeed: 125,
+      backDelay: 1000,
+      startDelay: 800,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
+      onStringTyped: function(arrayPos, self) {
+        // Add fade-out effect when a string is completely typed
+        typedElement.classList.add('fade-out');
+      },
+      preStringTyped: function(arrayPos, self) {
+        // Add fade-in effect when starting to type a new string
+        typedElement.classList.remove('fade-out');
+        typedElement.classList.add('fade-in');
+      },
+      onComplete: function(self) {
+        // Ensure the element is faded in after the last string is typed
+        typedElement.classList.remove('fade-out');
+        typedElement.classList.add('fade-in');
+      }
+    });
+  });
+
+
+// cost calculator
+
+
+
+function showLoader() {
+    const form = document.getElementById('costForm');
+    if (form.checkValidity()) {
+        form.style.display = 'none';
+        document.getElementById('loader').style.display = 'block';
+        setTimeout(calculateCost, 2000);
+    } else {
+        form.reportValidity();
+    }
+}
+
+function calculateCost() {
+    const developerCost = parseInt(document.getElementById('developer').value);
+    const websiteCost = parseInt(document.getElementById('website').value);
+    const pagesCost = parseInt(document.getElementById('pages').value) * 50; // Assuming each page costs $50
+
+    const totalCost = developerCost + websiteCost + pagesCost;
+
+    // Generate a range with +/- 10% variability
+    const minCost = Math.round(totalCost * 0.9);
+    const maxCost = Math.round(totalCost * 1.1);
+
+    const deadline = document.getElementById('deadline').value;
+
+    document.getElementById('total_cost_range').textContent = `$${minCost} - $${maxCost}`;
+    document.getElementById('selected_date').textContent = deadline;
+
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('result').style.display = 'flex';
+}
+
+function goBack() {
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('costForm').style.display = 'block';
+}
+$(document).ready(()=>{
+    $("#cost_cal_open").on("click",()=>{
+        $(".cost_calculator").show(300);
+    }),
+    $(".fa-xmark").on("click",()=>{
+        $(".cost_calculator").hide(300);
+
+    })
+})

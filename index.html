@@ -105,6 +105,85 @@
 
 <!--whtsapp end-->
 
+
+<!--Price Calculator Start-->
+
+ <div class="cost_calculator">
+    <div class="Cross_mark">
+        <i class="fa-regular fa-xmark"></i>
+    </div>
+    <h3>Estimate the cost of your software project<span style="color: orangered !important; font-size:34px;">.</span></h3>
+    <p>Answer five simple questions, and you’ll receive an instant cost estimation to help you get your project moving. Don't let cost uncertainties hold you back. Define your budget effortlessly with just a few clicks.</p>
+    <div class="container" style="margin-top: 4%; padding: 0px 50px;">
+        <form id="costForm">
+            <div>
+                <h4>1. What kind of developer are you looking for ?<span>(required)</span></h4>
+                <select id="developer" required>
+                    <option value="" disabled selected>Select Developer</option>
+                    <option value="400">Full Stack Developer</option>
+                    <option value="500">Frontend Developer</option>
+                    <option value="300">Backend Developer</option>
+                    <option value="200">Android Apps Developer</option>
+                    <option value="100">iOS Apps Developer</option>
+                </select>
+            </div>
+            <div class="mt-5">
+                <h4>2. What is the nature of your website ?<span>(required)</span></h4>
+                <select id="website" required>
+                    <option value="" disabled selected>Select Website Type</option>
+                    <option value="125">Wordpress</option>
+                    <option value="240">Custom</option>
+                    <option value="345">CRMs</option>
+                    <option value="895">EPRs</option>
+                    <option value="570">Ecommerce Website</option>
+                </select>
+            </div>
+            <div class="mt-5">
+                <h4>3. Number of pages ?<span>(optional)</span></h4>
+                <select id="pages" style="width: 100px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="mt-5">
+                <h4>4. Description about project <a style="color: orangered;">*</a><span>(optional)</span></h4>
+                <textarea placeholder="Give details of your project..."></textarea>
+            </div>
+            <div class="mt-5">
+                <h4>5. Attach the images <a style="color: orangered;">*</a><span>(optional)</span></h4>
+                <input type="file" class="mt-2">
+            </div>
+            <div class="mt-5">
+                <h4>6. Select the deadline for the project <a style="color: orangered;">*</a><span>(required)</span></h4>
+                <input type="date" id="deadline" class="mt-2" required>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-end mt-5">
+                <button type="button" class="hire-end_2_3" onclick="showLoader()">Calculate</button>
+            </div>
+        </form>
+        <div id="loader"></div>
+        <div class="mt-5 container flex-wrap col-lg-12" id="result">
+            <div class="col-lg-6 price_box">  
+                <h4>Total Estimated Cost:<br><span id="total_cost_range"></span></h4>
+            </div>
+            <div class="col-lg-6 price_box">
+                <h4>Project Deadline:<br> <span id="selected_date"></span></h4>
+            </div>
+            <div class="col-lg-12 d-flex justify-content-center">
+                <button type="button" class="start_project" onclick="goBack()">Start a Project <i class="fa-solid fa-arrow-right"></i></button>
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--Price Calculator End-->
+
     <!-- Voags, CRM, EPRMS, WordPress, bespoke, PHP, JavaScript, Vaogs, CMS, development agency, tailored solutions, app creation, website design, innovative software, digital transformation, custom software development, mobile app development, web development, software solutions." -->
     <!-- Offcanvas area start -->
     <div class="fix">
@@ -192,7 +271,7 @@
 
                                             </li>
                                             <li class=" ">
-                                                <a href="javascript:void(0)">Company<svg style="color: #000; " xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></a>
+                                                <a href="javascript:void(0)">Company<svg class="comapnysvg" style="color: #000; " xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg></a>
                                                 <ul class="submenu">
                                                     <li><a href="pricing.html">Pricing</a></li>
                                                     <li><a href="team.html">Team</a></li>
@@ -212,7 +291,7 @@
                             <div class="header__action d-flex align-items-center">
                                 <div class="header__btn-wrap d-none d-sm-inline-flex">
                                     <div class="social-media">
-                                       <button class="hire-end_2_3" onclick="location.replace('hireus.html')">Hire Us .</button>
+                                       <button class="hire-end_2_3" id="cost_cal_open">Hire Us .</button>
                                     
                                     </div>
                                 </div>
